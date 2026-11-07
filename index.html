@@ -1,76 +1,27 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>FST-402 | FSAE Hub Dynamometer Report</title>
-<link rel="stylesheet" href="index.css"><link rel="stylesheet" href="report.css">
-<link rel="stylesheet" href="components/team-member/team-member.css">
-<script type="module" src="components/team-member/team-member.js"></script>
-</head><body><header class="site-header"><div class="header-inner"><a href="#top" class="brand">FST-402</a><a href="#contents">Contents</a><a href="#report">Report</a></div></header>
-<main id="top" class="report-shell"><section class="report-cover"><p class="eyebrow">NUS FSAE EV · Engineering design report</p>
-<h1>Design and Development of a Hub Dynamometer</h1><p class="intro">FST-402 · NUS Formula SAE Electric Vehicle</p>
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FST-402 FSAE Dynamometer</title>
+<link rel="icon" href="./favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css">
+<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
+<link rel="stylesheet" href="./index.css"><link rel="stylesheet" href="./report.css">
+<link rel="stylesheet" href="./components/team-member/team-member.css">
+<script type="module" src="./components/team-member/team-member.js"></script>
+<link rel="stylesheet" href="./components/table-of-content/table-of-content.css">
+<script type="module" src="./components/image/image-component.js"></script>
+<script type="module" src="./components/video/video.js"></script>
+<link rel="stylesheet" href="./components/references/references.css">
+<link rel="stylesheet" href="./components/scroll-to-top/scroll-to-top.css">
+<script src="./components/scroll-to-top/scroll-to-top.js"></script>
+</head><body><div class="content">
+<h1>FST-402 FSAE Dynamometer</h1>
 <div class="team-member-wrapper"><team-member avatar="assets/blackranger.png" name="Marissa Koh" department="Mechanical Engineering" year="1993"></team-member>
 <team-member avatar="assets/yellowranger.png" name="Schuyler Seow" department="Computer Engineering" year="1993"></team-member>
-<team-member avatar="assets/redranger.png" name="Tan Javier" department="Electrical Engineering" year="1993"></team-member></div></section>
-<div class="report-layout"><nav id="contents" class="toc" aria-label="Table of contents"><h2>Table of Contents</h2>
-<a class="toc-level-2" href="#acknowledgements">Acknowledgements</a>
-<a class="toc-level-2" href="#abstract">Abstract</a>
-<a class="toc-level-2" href="#1-introduction">1. Introduction</a>
-<a class="toc-level-3" href="#1-1-nus-fsae-ev">1.1 NUS FSAE EV</a>
-<a class="toc-level-3" href="#1-2-problem-statement">1.2 Problem Statement</a>
-<a class="toc-level-3" href="#1-3-user-needs">1.3 User Needs</a>
-<a class="toc-level-3" href="#1-4-constraints">1.4 Constraints</a>
-<a class="toc-level-3" href="#1-5-previous-work">1.5 Previous Work</a>
-<a class="toc-level-3" href="#1-6-project-objective">1.6 Project Objective</a>
-<a class="toc-level-2" href="#2-design-requirements">2. Design Requirements</a>
-<a class="toc-level-3" href="#2-1-overall-system">2.1 Overall System</a>
-<a class="toc-level-3" href="#2-2-design-criteria">2.2 Design Criteria</a>
-<a class="toc-level-2" href="#3-concept-development">3. Concept development</a>
-<a class="toc-level-3" href="#3-1-dynamometer-types">3.1 Dynamometer Types</a>
-<a class="toc-level-4" href="#3-1-1-passive-vs-active-hub-dynamometers">3.1.1 Passive vs Active Hub Dynamometers</a>
-<a class="toc-level-3" href="#3-2-type-of-motor">3.2 Type of Motor</a>
-<a class="toc-level-3" href="#3-3-power-dissipation">3.3 Power Dissipation</a>
-<a class="toc-level-3" href="#3-4-frame-enclosure">3.4 Frame Enclosure</a>
-<a class="toc-level-3" href="#3-5-frame-joining-concept">3.5 Frame Joining Concept</a>
-<a class="toc-level-4" href="#3-5-1-frame-design-considerations">3.5.1 Frame Design Considerations</a>
-<a class="toc-level-4" href="#3-5-2-frame-joining-methods">3.5.2 Frame Joining Methods</a>
-<a class="toc-level-3" href="#3-6-power-transmission-concepts">3.6 Power Transmission Concepts</a>
-<a class="toc-level-4" href="#3-6-1-power-transmission-system-design-criteria">3.6.1 Power Transmission System Design Criteria</a>
-<a class="toc-level-4" href="#3-6-2-types-of-power-transmission-systems">3.6.2 Types of Power Transmission Systems</a>
-<a class="toc-level-3" href="#3-7-tensioner-concept">3.7 Tensioner Concept</a>
-<a class="toc-level-4" href="#3-7-1-tensioner-design-criteria">3.7.1 Tensioner Design Criteria</a>
-<a class="toc-level-4" href="#3-7-2-types-of-tensioner">3.7.2 Types of tensioner</a>
-<a class="toc-level-3" href="#3-8-overall-system-diagram">3.8 Overall System Diagram</a>
-<a class="toc-level-2" href="#4-detail-design">4. Detail Design</a>
-<a class="toc-level-3" href="#4-1-frame">4.1 Frame</a>
-<a class="toc-level-3" href="#4-2-tensioner">4.2 Tensioner</a>
-<a class="toc-level-3" href="#4-3-flange-and-shaft-design">4.3 Flange and Shaft Design</a>
-<a class="toc-level-3" href="#4-4-chain-drive-design">4.4 Chain-drive design</a>
-<a class="toc-level-4" href="#4-4-1-gear-ratio">4.4.1 Gear Ratio</a>
-<a class="toc-level-4" href="#4-4-2-center-distance">4.4.2 Center distance</a>
-<a class="toc-level-3" href="#4-5-bearing">4.5 Bearing</a>
-<a class="toc-level-3" href="#4-6-emrax-cooling">4.6 EMRAX Cooling</a>
-<a class="toc-level-3" href="#4-7-power-resistor-dissipation">4.7 Power Resistor Dissipation</a>
-<a class="toc-level-2" href="#5-testing">5. Testing</a>
-<a class="toc-level-3" href="#5-1-epoxy-bonding-test">5.1 Epoxy Bonding Test</a>
-<a class="toc-level-2" href="#6-finite-element-analysis">6. Finite Element Analysis</a>
-<a class="toc-level-3" href="#6-1-static-structural-simulation">6.1 Static Structural Simulation</a>
-<a class="toc-level-3" href="#6-1-problems-faced">6.1 Problems Faced</a>
-<a class="toc-level-3" href="#6-2-subsystem-simulation-results">6.2 Subsystem Simulation Results</a>
-<a class="toc-level-4" href="#6-2-1-frame-and-surface-subsystem">6.2.1 Frame and Surface Subsystem</a>
-<a class="toc-level-4" href="#6-2-2-chain-drive-subsystem">6.2.2 Chain drive Subsystem</a>
-<a class="toc-level-3" href="#6-3-future-simulation-work">6.3 Future Simulation work</a>
-<a class="toc-level-2" href="#7-project-plan">7. Project Plan</a>
-<a class="toc-level-2" href="#8-conclusion">8. Conclusion</a>
-<a class="toc-level-2" href="#appendix-a-emrax-specification">Appendix A - EMRAX Specification</a>
-<a class="toc-level-2" href="#appendix-b-dynapack-daq53-quotation-prices">Appendix B - Dynapack DAQ53 Quotation Prices</a>
-<a class="toc-level-2" href="#appendix-c-chain-drive-calculations">Appendix C - Chain Drive Calculations</a>
-<a class="toc-level-2" href="#appendix-d-cooling-specification-and-component-selection">Appendix D - Cooling Specification and Component Selection</a>
-<a class="toc-level-2" href="#appendix-e-payback-period-analysis-for-power-bank">Appendix E - Payback Period Analysis for Power bank</a>
-<a class="toc-level-2" href="#appendix-f-payback-period-analysis-for-regenerative-power">Appendix F — Payback Period Analysis for Regenerative Power</a>
-<a class="toc-level-2" href="#appendix-g-cost-analysis-for-power-resistor-dissipation">Appendix G — Cost Analysis for Power Resistor Dissipation</a>
-<a class="toc-level-2" href="#appendix-h-bearing-life-analysis">Appendix H —Bearing Life Analysis</a>
-<a class="toc-level-2" href="#appendix-i-epoxy-bonding-test">Appendix I - Epoxy Bonding Test</a>
-<a class="toc-level-2" href="#appendix-j-shear-forces-at-joints">Appendix J - Shear Forces at Joints</a>
-<a class="toc-level-2" href="#appendix-k">Appendix K -</a></nav><article id="report" class="report-content">
+<team-member avatar="assets/redranger.png" name="Tan Javier" department="Electrical Engineering" year="1993"></team-member></div>
+<sl-divider></sl-divider>
+<div class="table-of-content"><h2>Table of Contents</h2>
+<sl-tree><sl-tree-item expanded><a href="#acknowledgements">Acknowledgements</a></sl-tree-item><sl-tree-item expanded><a href="#abstract">Abstract</a></sl-tree-item><sl-tree-item expanded><a href="#1-introduction">1. Introduction</a><sl-tree-item expanded><a href="#1-1-nus-fsae-ev">1.1 NUS FSAE EV</a></sl-tree-item><sl-tree-item expanded><a href="#1-2-problem-statement">1.2 Problem Statement</a></sl-tree-item><sl-tree-item expanded><a href="#1-3-user-needs">1.3 User Needs</a></sl-tree-item><sl-tree-item expanded><a href="#1-4-constraints">1.4 Constraints</a></sl-tree-item><sl-tree-item expanded><a href="#1-5-previous-work">1.5 Previous Work</a></sl-tree-item><sl-tree-item expanded><a href="#1-6-project-objective">1.6 Project Objective</a></sl-tree-item></sl-tree-item><sl-tree-item expanded><a href="#2-design-requirements">2. Design Requirements</a><sl-tree-item expanded><a href="#2-1-overall-system">2.1 Overall System</a></sl-tree-item><sl-tree-item expanded><a href="#2-2-design-criteria">2.2 Design Criteria</a></sl-tree-item></sl-tree-item><sl-tree-item expanded><a href="#3-concept-development">3. Concept development</a><sl-tree-item expanded><a href="#3-1-dynamometer-types">3.1 Dynamometer Types</a><sl-tree-item expanded><a href="#3-1-1-passive-vs-active-hub-dynamometers">3.1.1 Passive vs Active Hub Dynamometers</a></sl-tree-item></sl-tree-item><sl-tree-item expanded><a href="#3-2-type-of-motor">3.2 Type of Motor</a></sl-tree-item><sl-tree-item expanded><a href="#3-3-power-dissipation">3.3 Power Dissipation</a></sl-tree-item><sl-tree-item expanded><a href="#3-4-frame-enclosure">3.4 Frame Enclosure</a></sl-tree-item><sl-tree-item expanded><a href="#3-5-frame-joining-concept">3.5 Frame Joining Concept</a><sl-tree-item expanded><a href="#3-5-1-frame-design-considerations">3.5.1 Frame Design Considerations</a></sl-tree-item><sl-tree-item expanded><a href="#3-5-2-frame-joining-methods">3.5.2 Frame Joining Methods</a></sl-tree-item></sl-tree-item><sl-tree-item expanded><a href="#3-6-power-transmission-concepts">3.6 Power Transmission Concepts</a><sl-tree-item expanded><a href="#3-6-1-power-transmission-system-design-criteria">3.6.1 Power Transmission System Design Criteria</a></sl-tree-item><sl-tree-item expanded><a href="#3-6-2-types-of-power-transmission-systems">3.6.2 Types of Power Transmission Systems</a></sl-tree-item></sl-tree-item><sl-tree-item expanded><a href="#3-7-tensioner-concept">3.7 Tensioner Concept</a><sl-tree-item expanded><a href="#3-7-1-tensioner-design-criteria">3.7.1 Tensioner Design Criteria</a></sl-tree-item><sl-tree-item expanded><a href="#3-7-2-types-of-tensioner">3.7.2 Types of tensioner</a></sl-tree-item></sl-tree-item><sl-tree-item expanded><a href="#3-8-overall-system-diagram">3.8 Overall System Diagram</a></sl-tree-item></sl-tree-item><sl-tree-item expanded><a href="#4-detail-design">4. Detail Design</a><sl-tree-item expanded><a href="#4-1-frame">4.1 Frame</a></sl-tree-item><sl-tree-item expanded><a href="#4-2-tensioner">4.2 Tensioner</a></sl-tree-item><sl-tree-item expanded><a href="#4-3-flange-and-shaft-design">4.3 Flange and Shaft Design</a></sl-tree-item><sl-tree-item expanded><a href="#4-4-chain-drive-design">4.4 Chain-drive design</a><sl-tree-item expanded><a href="#4-4-1-gear-ratio">4.4.1 Gear Ratio</a></sl-tree-item><sl-tree-item expanded><a href="#4-4-2-center-distance">4.4.2 Center distance</a></sl-tree-item></sl-tree-item><sl-tree-item expanded><a href="#4-5-bearing">4.5 Bearing</a></sl-tree-item><sl-tree-item expanded><a href="#4-6-emrax-cooling">4.6 EMRAX Cooling</a></sl-tree-item><sl-tree-item expanded><a href="#4-7-power-resistor-dissipation">4.7 Power Resistor Dissipation</a></sl-tree-item></sl-tree-item><sl-tree-item expanded><a href="#5-testing">5. Testing</a><sl-tree-item expanded><a href="#5-1-epoxy-bonding-test">5.1 Epoxy Bonding Test</a></sl-tree-item></sl-tree-item><sl-tree-item expanded><a href="#6-finite-element-analysis">6. Finite Element Analysis</a><sl-tree-item expanded><a href="#6-1-static-structural-simulation">6.1 Static Structural Simulation</a></sl-tree-item><sl-tree-item expanded><a href="#6-1-problems-faced">6.1 Problems Faced</a></sl-tree-item><sl-tree-item expanded><a href="#6-2-subsystem-simulation-results">6.2 Subsystem Simulation Results</a><sl-tree-item expanded><a href="#6-2-1-frame-and-surface-subsystem">6.2.1 Frame and Surface Subsystem</a></sl-tree-item><sl-tree-item expanded><a href="#6-2-2-chain-drive-subsystem">6.2.2 Chain drive Subsystem</a></sl-tree-item></sl-tree-item><sl-tree-item expanded><a href="#6-3-future-simulation-work">6.3 Future Simulation work</a></sl-tree-item></sl-tree-item><sl-tree-item expanded><a href="#7-project-plan">7. Project Plan</a></sl-tree-item><sl-tree-item expanded><a href="#8-conclusion">8. Conclusion</a></sl-tree-item><sl-tree-item expanded><a href="#appendix-a-emrax-specification">Appendix A - EMRAX Specification</a></sl-tree-item><sl-tree-item expanded><a href="#appendix-b-dynapack-daq53-quotation-prices">Appendix B - Dynapack DAQ53 Quotation Prices</a></sl-tree-item><sl-tree-item expanded><a href="#appendix-c-chain-drive-calculations">Appendix C - Chain Drive Calculations</a></sl-tree-item><sl-tree-item expanded><a href="#appendix-d-cooling-specification-and-component-selection">Appendix D - Cooling Specification and Component Selection</a></sl-tree-item><sl-tree-item expanded><a href="#appendix-e-payback-period-analysis-for-power-bank">Appendix E - Payback Period Analysis for Power bank</a></sl-tree-item><sl-tree-item expanded><a href="#appendix-f-payback-period-analysis-for-regenerative-power">Appendix F — Payback Period Analysis for Regenerative Power</a></sl-tree-item><sl-tree-item expanded><a href="#appendix-g-cost-analysis-for-power-resistor-dissipation">Appendix G — Cost Analysis for Power Resistor Dissipation</a></sl-tree-item><sl-tree-item expanded><a href="#appendix-h-bearing-life-analysis">Appendix H —Bearing Life Analysis</a></sl-tree-item><sl-tree-item expanded><a href="#appendix-i-epoxy-bonding-test">Appendix I - Epoxy Bonding Test</a></sl-tree-item><sl-tree-item expanded><a href="#appendix-j-shear-forces-at-joints">Appendix J - Shear Forces at Joints</a></sl-tree-item><sl-tree-item expanded><a href="#appendix-k">Appendix K -</a></sl-tree-item></sl-tree></div><sl-divider></sl-divider>
+<div class="report-body">
 <div class="source-page" data-original-page="3">
 <h2 id="acknowledgements">Acknowledgements</h2>
 </div>
@@ -703,5 +654,6 @@
 </div>
 <div class="source-page" data-original-page="72">
 <h2 id="appendix-k">Appendix K -</h2>
-</div></article></div><footer>FST-402 · NUS FSAE EV</footer></main>
-<a href="#top" class="back-top" aria-label="Back to top">↑</a></body></html>
+</div></div></div>
+<sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()"><sl-icon name="arrow-up" label="Back to top"></sl-icon></sl-button>
+</body></html>
