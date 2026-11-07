@@ -1,12 +1,5 @@
 
-.report-intro{max-width:850px;margin:3rem auto 2rem;line-height:1.6}.report-note{color:#555}
-.report-toc{max-width:850px;margin:1.5rem auto 3rem;border:1px solid #ddd;border-radius:12px;padding:18px 24px}
-.report-toc summary{cursor:pointer;font-weight:700;font-size:1.2rem}.report-toc nav{display:grid;gap:.45rem;margin-top:1rem}
-.report-toc a{color:#245b85;text-decoration:none}.report-toc a:hover{text-decoration:underline}.toc-level-3{padding-left:1.4rem;font-size:.93rem}
-.report-body{max-width:900px;margin:0 auto}.report-page{border-bottom:1px solid #eee;padding:1rem 0 2rem;overflow-wrap:anywhere}
-.report-page h2{margin:1.5rem 0 .8rem}.report-page h3{margin:1.3rem 0 .6rem}.report-page p{line-height:1.75;margin:.65rem 0}
-.page-tag{font-size:.75rem;color:#888;text-align:right}.report-page figure{margin:2rem auto;text-align:center}
-.report-page figure img{max-width:100%;height:auto;border:1px solid #eee;border-radius:5px}
-.report-page figcaption{font-size:.8rem;color:#777;margin-top:.5rem}
-.report-table{white-space:pre;overflow-x:auto;background:#f7f8fa;border-radius:8px;padding:1rem;font:inherit;font-size:.88rem;line-height:1.65}
-@media(max-width:650px){.report-toc{padding:12px}.report-body{padding:0 8px}.report-page{padding:1rem 0}.report-table{font-size:.76rem}}
+.original-report{max-width:1020px;margin:2rem auto;display:flex;flex-direction:column;gap:18px}
+.pdf-page{width:100%;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.13)}
+.pdf-page img{display:block;width:100%;height:auto;aspect-ratio:17/22}
+@media(max-width:650px){.original-report{margin:1rem -12px;gap:10px}.pdf-page{box-shadow:0 1px 5px rgba(0,0,0,.12)}}
