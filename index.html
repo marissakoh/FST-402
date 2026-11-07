@@ -1,139 +1,714 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>FSAE Dynamometer</title>
-  <link rel="icon" href="./favicon.ico" type="image/x-icon">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
-  <script type="module"
-    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
-
-  <link rel="stylesheet" href="./index.css">
-  <link rel="stylesheet" href="./report.css">
-
-  <link rel="stylesheet" href="./components/team-member/team-member.css">
-  <script type="module" src="./components/team-member/team-member.js"></script>
-
-  <link rel="stylesheet" href="./components/table-of-content/table-of-content.css">
-
-  <script type="module" src="./components/image/image-component.js"></script>
-
-  <script type="module" src="./components/video/video.js"></script>
-
-  <link rel="stylesheet" href="./components/references/references.css">
-
-  <link rel="stylesheet" href="./components/scroll-to-top/scroll-to-top.css">
-  <script src="./components/scroll-to-top/scroll-to-top.js"></script>
-
-  <script src="./components/table-component/table-component.js"></script>
-
-  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
-</head>
-
-<body>
-  <div class="content">
-    <h1>FST-402 FSAE Dynamometer</h1>
-
-    <!-- This is the team member component use to display details about your team members -->
-    <div class="team-member-wrapper">
-      <team-member avatar="assets/blackranger.png" name="Marissa Koh" department="Mechanical Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/yellowranger.png" name="Schuyler Seow" department="Computer Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/redranger.png" name="Tan Javier" department="Electrical Engineering"
-        year="1993"></team-member>
-    </div>
-
-    <sl-divider></sl-divider>
-    <main class="original-report" aria-label="Original report pages">
-      <div class="pdf-page" id="report-page-1"><img src="assets/report-pages/page-01.jpg" loading="eager" alt="FST-402 report, original PDF page 1" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-2"><img src="assets/report-pages/page-02.jpg" loading="eager" alt="FST-402 report, original PDF page 2" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-3"><img src="assets/report-pages/page-03.jpg" loading="lazy" alt="FST-402 report, original PDF page 3" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-4"><img src="assets/report-pages/page-04.jpg" loading="lazy" alt="FST-402 report, original PDF page 4" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-5"><img src="assets/report-pages/page-05.jpg" loading="lazy" alt="FST-402 report, original PDF page 5" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-6"><img src="assets/report-pages/page-06.jpg" loading="lazy" alt="FST-402 report, original PDF page 6" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-7"><img src="assets/report-pages/page-07.jpg" loading="lazy" alt="FST-402 report, original PDF page 7" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-8"><img src="assets/report-pages/page-08.jpg" loading="lazy" alt="FST-402 report, original PDF page 8" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-9"><img src="assets/report-pages/page-09.jpg" loading="lazy" alt="FST-402 report, original PDF page 9" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-10"><img src="assets/report-pages/page-10.jpg" loading="lazy" alt="FST-402 report, original PDF page 10" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-11"><img src="assets/report-pages/page-11.jpg" loading="lazy" alt="FST-402 report, original PDF page 11" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-12"><img src="assets/report-pages/page-12.jpg" loading="lazy" alt="FST-402 report, original PDF page 12" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-13"><img src="assets/report-pages/page-13.jpg" loading="lazy" alt="FST-402 report, original PDF page 13" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-14"><img src="assets/report-pages/page-14.jpg" loading="lazy" alt="FST-402 report, original PDF page 14" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-15"><img src="assets/report-pages/page-15.jpg" loading="lazy" alt="FST-402 report, original PDF page 15" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-16"><img src="assets/report-pages/page-16.jpg" loading="lazy" alt="FST-402 report, original PDF page 16" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-17"><img src="assets/report-pages/page-17.jpg" loading="lazy" alt="FST-402 report, original PDF page 17" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-18"><img src="assets/report-pages/page-18.jpg" loading="lazy" alt="FST-402 report, original PDF page 18" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-19"><img src="assets/report-pages/page-19.jpg" loading="lazy" alt="FST-402 report, original PDF page 19" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-20"><img src="assets/report-pages/page-20.jpg" loading="lazy" alt="FST-402 report, original PDF page 20" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-21"><img src="assets/report-pages/page-21.jpg" loading="lazy" alt="FST-402 report, original PDF page 21" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-22"><img src="assets/report-pages/page-22.jpg" loading="lazy" alt="FST-402 report, original PDF page 22" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-23"><img src="assets/report-pages/page-23.jpg" loading="lazy" alt="FST-402 report, original PDF page 23" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-24"><img src="assets/report-pages/page-24.jpg" loading="lazy" alt="FST-402 report, original PDF page 24" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-25"><img src="assets/report-pages/page-25.jpg" loading="lazy" alt="FST-402 report, original PDF page 25" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-26"><img src="assets/report-pages/page-26.jpg" loading="lazy" alt="FST-402 report, original PDF page 26" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-27"><img src="assets/report-pages/page-27.jpg" loading="lazy" alt="FST-402 report, original PDF page 27" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-28"><img src="assets/report-pages/page-28.jpg" loading="lazy" alt="FST-402 report, original PDF page 28" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-29"><img src="assets/report-pages/page-29.jpg" loading="lazy" alt="FST-402 report, original PDF page 29" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-30"><img src="assets/report-pages/page-30.jpg" loading="lazy" alt="FST-402 report, original PDF page 30" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-31"><img src="assets/report-pages/page-31.jpg" loading="lazy" alt="FST-402 report, original PDF page 31" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-32"><img src="assets/report-pages/page-32.jpg" loading="lazy" alt="FST-402 report, original PDF page 32" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-33"><img src="assets/report-pages/page-33.jpg" loading="lazy" alt="FST-402 report, original PDF page 33" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-34"><img src="assets/report-pages/page-34.jpg" loading="lazy" alt="FST-402 report, original PDF page 34" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-35"><img src="assets/report-pages/page-35.jpg" loading="lazy" alt="FST-402 report, original PDF page 35" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-36"><img src="assets/report-pages/page-36.jpg" loading="lazy" alt="FST-402 report, original PDF page 36" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-37"><img src="assets/report-pages/page-37.jpg" loading="lazy" alt="FST-402 report, original PDF page 37" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-38"><img src="assets/report-pages/page-38.jpg" loading="lazy" alt="FST-402 report, original PDF page 38" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-39"><img src="assets/report-pages/page-39.jpg" loading="lazy" alt="FST-402 report, original PDF page 39" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-40"><img src="assets/report-pages/page-40.jpg" loading="lazy" alt="FST-402 report, original PDF page 40" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-41"><img src="assets/report-pages/page-41.jpg" loading="lazy" alt="FST-402 report, original PDF page 41" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-42"><img src="assets/report-pages/page-42.jpg" loading="lazy" alt="FST-402 report, original PDF page 42" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-43"><img src="assets/report-pages/page-43.jpg" loading="lazy" alt="FST-402 report, original PDF page 43" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-44"><img src="assets/report-pages/page-44.jpg" loading="lazy" alt="FST-402 report, original PDF page 44" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-45"><img src="assets/report-pages/page-45.jpg" loading="lazy" alt="FST-402 report, original PDF page 45" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-46"><img src="assets/report-pages/page-46.jpg" loading="lazy" alt="FST-402 report, original PDF page 46" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-47"><img src="assets/report-pages/page-47.jpg" loading="lazy" alt="FST-402 report, original PDF page 47" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-48"><img src="assets/report-pages/page-48.jpg" loading="lazy" alt="FST-402 report, original PDF page 48" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-49"><img src="assets/report-pages/page-49.jpg" loading="lazy" alt="FST-402 report, original PDF page 49" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-50"><img src="assets/report-pages/page-50.jpg" loading="lazy" alt="FST-402 report, original PDF page 50" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-51"><img src="assets/report-pages/page-51.jpg" loading="lazy" alt="FST-402 report, original PDF page 51" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-52"><img src="assets/report-pages/page-52.jpg" loading="lazy" alt="FST-402 report, original PDF page 52" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-53"><img src="assets/report-pages/page-53.jpg" loading="lazy" alt="FST-402 report, original PDF page 53" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-54"><img src="assets/report-pages/page-54.jpg" loading="lazy" alt="FST-402 report, original PDF page 54" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-55"><img src="assets/report-pages/page-55.jpg" loading="lazy" alt="FST-402 report, original PDF page 55" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-56"><img src="assets/report-pages/page-56.jpg" loading="lazy" alt="FST-402 report, original PDF page 56" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-57"><img src="assets/report-pages/page-57.jpg" loading="lazy" alt="FST-402 report, original PDF page 57" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-58"><img src="assets/report-pages/page-58.jpg" loading="lazy" alt="FST-402 report, original PDF page 58" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-59"><img src="assets/report-pages/page-59.jpg" loading="lazy" alt="FST-402 report, original PDF page 59" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-60"><img src="assets/report-pages/page-60.jpg" loading="lazy" alt="FST-402 report, original PDF page 60" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-61"><img src="assets/report-pages/page-61.jpg" loading="lazy" alt="FST-402 report, original PDF page 61" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-62"><img src="assets/report-pages/page-62.jpg" loading="lazy" alt="FST-402 report, original PDF page 62" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-63"><img src="assets/report-pages/page-63.jpg" loading="lazy" alt="FST-402 report, original PDF page 63" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-64"><img src="assets/report-pages/page-64.jpg" loading="lazy" alt="FST-402 report, original PDF page 64" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-65"><img src="assets/report-pages/page-65.jpg" loading="lazy" alt="FST-402 report, original PDF page 65" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-66"><img src="assets/report-pages/page-66.jpg" loading="lazy" alt="FST-402 report, original PDF page 66" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-67"><img src="assets/report-pages/page-67.jpg" loading="lazy" alt="FST-402 report, original PDF page 67" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-68"><img src="assets/report-pages/page-68.jpg" loading="lazy" alt="FST-402 report, original PDF page 68" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-69"><img src="assets/report-pages/page-69.jpg" loading="lazy" alt="FST-402 report, original PDF page 69" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-70"><img src="assets/report-pages/page-70.jpg" loading="lazy" alt="FST-402 report, original PDF page 70" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-71"><img src="assets/report-pages/page-71.jpg" loading="lazy" alt="FST-402 report, original PDF page 71" width="1020" height="1320"></div>
-      <div class="pdf-page" id="report-page-72"><img src="assets/report-pages/page-72.jpg" loading="lazy" alt="FST-402 report, original PDF page 72" width="1020" height="1320"></div>
-    </main>
-  </div>
-
-  <!-- This is the code to display the scroll to top button for ergonomic -->
-  <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
-  <!-- but it might reduce the user experience. -->
-  <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
-    <sl-icon name="arrow-up" label="Settings"></sl-icon>
-  </sl-button>
-
-  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
-  <script type="module" src="./components/table-component/table-component.js"></script>
-</body>
-
-</html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FST-402 | FSAE Hub Dynamometer Report</title>
+<link rel="stylesheet" href="index.css"><link rel="stylesheet" href="report.css">
+<link rel="stylesheet" href="components/team-member/team-member.css">
+<script type="module" src="components/team-member/team-member.js"></script>
+</head><body><header class="site-header"><div class="header-inner"><a href="#top" class="brand">FST-402</a><a href="#contents">Contents</a><a href="#report">Report</a></div></header>
+<main id="top" class="report-shell"><section class="report-cover"><p class="eyebrow">NUS FSAE EV · Engineering design report</p>
+<h1>Design and Development of a Hub Dynamometer</h1><p class="intro">FST-402 · NUS Formula SAE Electric Vehicle</p>
+<div class="team-member-wrapper"><team-member avatar="assets/blackranger.png" name="Marissa Koh" department="Mechanical Engineering" year="1993"></team-member>
+<team-member avatar="assets/yellowranger.png" name="Schuyler Seow" department="Computer Engineering" year="1993"></team-member>
+<team-member avatar="assets/redranger.png" name="Tan Javier" department="Electrical Engineering" year="1993"></team-member></div></section>
+<div class="report-layout"><nav id="contents" class="toc" aria-label="Table of contents"><h2>Table of Contents</h2>
+<a class="toc-level-2" href="#acknowledgements">Acknowledgements</a>
+<a class="toc-level-2" href="#abstract">Abstract</a>
+<a class="toc-level-2" href="#1-introduction">1. Introduction</a>
+<a class="toc-level-3" href="#1-1-nus-fsae-ev">1.1 NUS FSAE EV</a>
+<a class="toc-level-3" href="#1-2-problem-statement">1.2 Problem Statement</a>
+<a class="toc-level-3" href="#1-3-user-needs">1.3 User Needs</a>
+<a class="toc-level-3" href="#1-4-constraints">1.4 Constraints</a>
+<a class="toc-level-3" href="#1-5-previous-work">1.5 Previous Work</a>
+<a class="toc-level-3" href="#1-6-project-objective">1.6 Project Objective</a>
+<a class="toc-level-2" href="#2-design-requirements">2. Design Requirements</a>
+<a class="toc-level-3" href="#2-1-overall-system">2.1 Overall System</a>
+<a class="toc-level-3" href="#2-2-design-criteria">2.2 Design Criteria</a>
+<a class="toc-level-2" href="#1-able-to-withstand-hub-torque-of-440-nm-2-able-to-withstand-hub-speed-of-2167-rpm-3-able-to-withstand-operating-duration-of-15-minutes-per-week-4-compact-and-portable">1. Able to withstand hub torque of 440 Nm 2. Able to withstand hub speed of 2167 RPM 3. Able to withstand operating duration of 15 minutes per week 4. Compact and Portable</a>
+<a class="toc-level-2" href="#3-concept-development">3. Concept development</a>
+<a class="toc-level-3" href="#3-1-dynamometer-types">3.1 Dynamometer Types</a>
+<a class="toc-level-4" href="#3-1-1-passive-vs-active-hub-dynamometers">3.1.1 Passive vs Active Hub Dynamometers</a>
+<a class="toc-level-3" href="#3-2-type-of-motor">3.2 Type of Motor</a>
+<a class="toc-level-3" href="#3-3-power-dissipation">3.3 Power Dissipation</a>
+<a class="toc-level-3" href="#3-4-frame-enclosure">3.4 Frame Enclosure</a>
+<a class="toc-level-3" href="#3-5-frame-joining-concept">3.5 Frame Joining Concept</a>
+<a class="toc-level-4" href="#3-5-1-frame-design-considerations">3.5.1 Frame Design Considerations</a>
+<a class="toc-level-4" href="#3-5-2-frame-joining-methods">3.5.2 Frame Joining Methods</a>
+<a class="toc-level-3" href="#3-6-power-transmission-concepts">3.6 Power Transmission Concepts</a>
+<a class="toc-level-4" href="#3-6-1-power-transmission-system-design-criteria">3.6.1 Power Transmission System Design Criteria</a>
+<a class="toc-level-4" href="#3-6-2-types-of-power-transmission-systems">3.6.2 Types of Power Transmission Systems</a>
+<a class="toc-level-3" href="#3-7-tensioner-concept">3.7 Tensioner Concept</a>
+<a class="toc-level-4" href="#3-7-1-tensioner-design-criteria">3.7.1 Tensioner Design Criteria</a>
+<a class="toc-level-4" href="#3-7-2-types-of-tensioner">3.7.2 Types of tensioner</a>
+<a class="toc-level-3" href="#3-8-overall-system-diagram">3.8 Overall System Diagram</a>
+<a class="toc-level-2" href="#4-detail-design">4. Detail Design</a>
+<a class="toc-level-3" href="#4-1-frame">4.1 Frame</a>
+<a class="toc-level-3" href="#4-2-tensioner">4.2 Tensioner</a>
+<a class="toc-level-3" href="#4-3-flange-and-shaft-design">4.3 Flange and Shaft Design</a>
+<a class="toc-level-3" href="#4-4-chain-drive-design">4.4 Chain-drive design</a>
+<a class="toc-level-4" href="#4-4-1-gear-ratio">4.4.1 Gear Ratio</a>
+<a class="toc-level-4" href="#4-4-2-center-distance">4.4.2 Center distance</a>
+<a class="toc-level-3" href="#4-5-bearing">4.5 Bearing</a>
+<a class="toc-level-3" href="#4-6-emrax-cooling">4.6 EMRAX Cooling</a>
+<a class="toc-level-3" href="#4-7-power-resistor-dissipation">4.7 Power Resistor Dissipation</a>
+<a class="toc-level-2" href="#5-testing">5. Testing</a>
+<a class="toc-level-3" href="#5-1-epoxy-bonding-test">5.1 Epoxy Bonding Test</a>
+<a class="toc-level-2" href="#1-static-lap-shear-test-iso-4587-to-determine-the-maximum-load-and-apparent-shear-strength">1. Static Lap-Shear Test (ISO 4587): To determine the maximum load and apparent shear strength</a>
+<a class="toc-level-2" href="#6-finite-element-analysis">6. Finite Element Analysis</a>
+<a class="toc-level-3" href="#6-1-static-structural-simulation">6.1 Static Structural Simulation</a>
+<a class="toc-level-3" href="#6-1-problems-faced">6.1 Problems Faced</a>
+<a class="toc-level-3" href="#6-2-subsystem-simulation-results">6.2 Subsystem Simulation Results</a>
+<a class="toc-level-4" href="#6-2-1-frame-and-surface-subsystem">6.2.1 Frame and Surface Subsystem</a>
+<a class="toc-level-4" href="#6-2-2-chain-drive-subsystem">6.2.2 Chain drive Subsystem</a>
+<a class="toc-level-3" href="#6-3-future-simulation-work">6.3 Future Simulation work</a>
+<a class="toc-level-2" href="#7-project-plan">7. Project Plan</a>
+<a class="toc-level-2" href="#8-conclusion">8. Conclusion</a>
+<a class="toc-level-2" href="#appendix-a-emrax-specification">Appendix A - EMRAX Specification</a>
+<a class="toc-level-2" href="#appendix-b-dynapack-daq53-quotation-prices">Appendix B - Dynapack DAQ53 Quotation Prices</a>
+<a class="toc-level-2" href="#appendix-c-chain-drive-calculations">Appendix C - Chain Drive Calculations</a>
+<a class="toc-level-3" href="#15-875-28-11">15.875 + 28+11</a>
+<a class="toc-level-3" href="#112-7-34-73-pitches">112.7 = 34.73 pitches</a>
+<a class="toc-level-2" href="#appendix-d-cooling-specification-and-component-selection">Appendix D - Cooling Specification and Component Selection</a>
+<a class="toc-level-2" href="#appendix-e-payback-period-analysis-for-power-bank">Appendix E - Payback Period Analysis for Power bank</a>
+<a class="toc-level-2" href="#appendix-f-payback-period-analysis-for-regenerative-power">Appendix F — Payback Period Analysis for Regenerative Power</a>
+<a class="toc-level-2" href="#appendix-g-cost-analysis-for-power-resistor-dissipation">Appendix G — Cost Analysis for Power Resistor Dissipation</a>
+<a class="toc-level-2" href="#appendix-h-bearing-life-analysis">Appendix H —Bearing Life Analysis</a>
+<a class="toc-level-2" href="#appendix-i-epoxy-bonding-test">Appendix I - Epoxy Bonding Test</a>
+<a class="toc-level-2" href="#1-mount-the-specimen-symmetrically-in-the-tensile-testing-machine-2-position-each-grip-approximately-50-1-mm-from-the-nearest-edge-of-the-bonded-overlap-as">1. Mount the specimen symmetrically in the tensile testing machine. 2. Position each grip approximately 50 ± 1 mm from the nearest edge of the bonded overlap, as</a>
+<a class="toc-level-2" href="#1-mount-a-new-specimen-in-the-fatigue-testing-machine-using-suitable-aligned-grips-2-configure-the-machine-for-sinusoidal-load-controlled-fatigue-testing-3-set-the-mean-force-f-m-based-on-the-selected-mean-stress-4-set-the-force-amplitude-f-a-corresponding-to-the-selected-stress-amplitude-5-set-the-testing-frequency-to-30-hz-subject-to-machine-capability-and-confirmation-that-excessive">1. Mount a new specimen in the fatigue testing machine using suitable aligned grips. 2. Configure the machine for sinusoidal load-controlled fatigue testing. 3. Set the mean force, (F_m), based on the selected mean stress. 4. Set the force amplitude, (F_a), corresponding to the selected stress amplitude. 5. Set the testing frequency to 30 Hz, subject to machine capability and confirmation that excessive</a>
+<a class="toc-level-2" href="#6-apply-the-mean-load-and-gradually-establish-the-required-cyclic-loading-conditions-7-continue-cyclic-loading-until-the-specimen-fails-or-reaches-the-predetermined-run-out-limit-of">6. Apply the mean load and gradually establish the required cyclic loading conditions. 7. Continue cyclic loading until the specimen fails or reaches the predetermined run-out limit of</a>
+<a class="toc-level-2" href="#appendix-j-shear-forces-at-joints">Appendix J - Shear Forces at Joints</a>
+<a class="toc-level-2" href="#appendix-k">Appendix K -</a></nav><article id="report" class="report-content">
+<div class="source-page" data-original-page="3">
+<h2 id="acknowledgements">Acknowledgements</h2>
+</div>
+<div class="source-page" data-original-page="4">
+<h2 id="abstract">Abstract</h2>
+</div>
+<div class="source-page" data-original-page="5">
+<h2 id="1-introduction">1. Introduction</h2>
+<h3 id="1-1-nus-fsae-ev">1.1 NUS FSAE EV</h3>
+<p>The NUS FSAE EV team designs and develops a formula-style electric vehicle to compete in the annual Formula SAE competition, held at the Michigan International Speedway. Unlike conventional road vehicles, the FSAE EV has a significantly smaller overall size, lower ride height, and specialised wheel hub configuration. The vehicle is rear-wheel driven by a single EMRAX 228 electric motor (refer to Appendix A for motor specifications), which is capable of delivering high torque at low rotational speeds. However, in accordance with FSAE competition regulations, the vehicle&#x27;s power output is limited to 80 kW, with a maximum operating speed of 2000 rpm.</p>
+<figure class="report-figure"><svg viewBox="100.5 256.13 411.0 264.75" role="img" aria-label="Illustration from original report, page 5" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-05.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure 1: NUS FSAE EV at Formula SAE Michigan</p>
+<p>At present, the NUS FSAE EV team relies on on-track testing to evaluate the vehicle&#x27;s performance. However, as NUS does not have a dedicated racetrack, conducting these tests requires the race car to be fully assembled, loaded onto a truck, and transported to an external testing venue. This process is time-consuming and requires considerable logistical coordination, limiting the frequency and convenience of testing. Furthermore, on-track testing is highly dependent on weather conditions, with adverse weather potentially resulting in delays or cancellations.</p>
+<p>In addition to these logistical challenges, obtaining accurate and consistent measurements of key performance parameters, such as torque, rotational speed, power output, and drivetrain efficiency, can be challenging during on-track testing. Variations in track and operating conditions make it difficult to</p>
+</div>
+<div class="source-page" data-original-page="6">
+<p>conduct controlled and repeatable tests, thereby limiting the team&#x27;s ability to evaluate drivetrain modifications and identify opportunities for performance optimisation.</p>
+<p>To address these limitations, a dynamometer system can be developed to enable controlled and repeatable drivetrain testing within the NUS FSAE workshop. This would allow the team to conduct tests at their convenience, even before the vehicle is fully assembled and reduce reliance on external testing venues and favourable weather conditions.</p>
+<p>The dynamometer would also reduce the time and effort required to obtain key performance measurements. This would allow the team to spend less time on testing and dedicate time and resources saved to other areas of vehicle development and performance improvement. With an anticipated operating duration of approximately 15 minutes per week, the system would significantly reduce testing time and logistical effort, allowing the team to focus on further optimising the race car&#x27;s performance.</p>
+<p>Given the pros, why hasn’t the FSAE team tried to procure a dynamometer previously? This is because commercial dynamometers are unsuitable for the EV due to the differences in vehicle dimensions, height, and wheel hub configuration compared to conventional cars. Additionally, they require substantial space for operation and storage which exceeds the available space in the FSAE workshop. The high cost of these dynamometers is also difficult to justify, given the team’s limited testing frequency of approximately 15 minutes per week (Appendix B).</p>
+<h3 id="1-2-problem-statement">1.2 Problem Statement</h3>
+<p>Commercial dynamometers are unsuitable for the NUS FSAE team due to the high cost, large space requirements, and incompatibility with the vehicle&#x27;s dimensions and configuration.</p>
+<h3 id="1-3-user-needs">1.3 User Needs</h3>
+<p>Through discussions and interviews with the FSAE team, we have identified the key considerations and user needs for the dynamometer system.</p>
+<div class="table-scroll"><table><tr><th>User Needs</th><th>Description</th></tr><tr><td>Cost Effective/low cost</td><td>● Significantly lower cost than a commercial dynamometer.</td></tr><tr><td>Compact and portable</td><td>● Easy to move and store within the workshop. ● Minimal space required when not in use.</td></tr><tr><td>Easy to set up and operate</td><td>● Minimal setup time and complexity. ● Easy mounting and alignment with wheel hub.</td></tr><tr><td>Compatible with FSAE EV</td><td>● Accommodates a range of different gear ratios that future FSAE’s EV may incorporate.</td></tr></table></div>
+</div>
+<div class="source-page" data-original-page="7">
+<div class="table-scroll"><table><tr><th>User Needs</th><th>Description</th></tr><tr><td>Safe and structurally robust</td><td>● Able to withstand expected torque, rotational speed and vehicle load. ● Secure mounting and appropriate protection for users from rotating components. ● Safely discharge energy generated by the dynamometer.</td></tr><tr><td>Reliable and repeatable</td><td>● Provides consistent torque, rotational speed, and power output and drivetrain efficiency measurements across repeated tests. ● Capable of frequent and long test runs without frequently servicing or replacing components.</td></tr></table></div>
+<h3 id="1-4-constraints">1.4 Constraints</h3>
+<p>A primary constraint identified at the start of this project was our limited background and practical experience in electrical engineering, which is a critical aspect of developing the dynamometer&#x27;s electrical system for measuring vehicle torque and power output.</p>
+<p>Furthermore, the limited workshop space and strict budget of $2,400 imposed additional constraints on the overall size of the dynamometer and the selection of components. To minimise costs, existing components and resources from the FSAE team would be reused wherever possible.</p>
+<p>Another constraint was the limited availability of technical resources and references regarding the design and construction of dynamometers, which could make the development process more challenging.</p>
+<p>Additionally, the limited processing power and memory of our available computers could restrict the complexity and mesh quality of structural simulations. Limited access to physical testing equipment would also need to be considered when planning the validation and testing procedures.</p>
+<h3 id="1-5-previous-work">1.5 Previous Work</h3>
+<p>This is a large-scale project that spans across multiple years, where an overall description of the phases of this project can be seen in figure X.</p>
+</div>
+<div class="source-page" data-original-page="8">
+<p class="caption">Figure X: FSAE Dynamometer project outline</p>
+<p>The previous team focused on phase 1, where they developed a mechanical design consisting of a welded steel structural frame, and a flange to mount the vehicle&#x27;s wheel hub to the dynamometer motor (Figure X). Finite Element Analysis (FEA) was conducted to assess the strength of the frame and mounting flange, but no physical tests under operating conditions were carried out.</p>
+<figure class="report-figure"><svg viewBox="132.75 321.22 346.5 239.25" role="img" aria-label="Illustration from original report, page 8" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-08.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>Figure : Previous Year’s Dynamometer attached to the hub of the FSAE Car</p>
+<p>However, several limitations were identified in the previous design. Firstly, the wheel hub of the car is directly connected to the dynamometer’s motor, which did not account for the vehicle&#x27;s internal gear ratio when determining the torque and rotational speed requirements. Hence, the design was unsuitable as the maximum output torque of the car exceeds the maximum allowable input torque of the motor in the dynamometer. Furthermore, while a cooling system was proposed (Figure X), its thermal performance had not been fully evaluated. Hence, the component selection, layout and frame design would have to be reconsidered in order to ensure the design will be able to operate under a load from the car.</p>
+</div>
+<div class="source-page" data-original-page="9">
+<figure class="report-figure"><svg viewBox="291.38 73.5 239.24 189.0" role="img" aria-label="Illustration from original report, page 9" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-09.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="81.38 75.75 207.0 186.75" role="img" aria-label="Illustration from original report, page 9" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-09.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure X: Previous Year’s Cooling Assembly</p>
+<p>For our project, we will be building upon the previous work to redesign the dynamometer’s components, layout, and frame with consideration of the vehicle&#x27;s actual operating conditions, while also working on the second phase to further develop the cooling and electrical systems to achieve a more complete and functional dynamometer.</p>
+<p>The next phase of the project will include scaling up the dynamometer to an active dynamometer that will enable more advanced and scenario-based testing for FSAE’s car development, and to be mounted to the two rear wheels of the car, or even to all four wheels when the NUS FSAE team scales up to a four-wheel drive vehicle.</p>
+<h3 id="1-6-project-objective">1.6 Project Objective</h3>
+<p>The objective of this project is to design and develop a functional dynamometer capable of applying a safe and fixed load to the FSAE race car to evaluate its performance output, while maintaining a compact design suitable for the limited space available in the FSAE workshop. This includes ensuring the dynamometer can accommodate a range of vehicle torque and speed, and having a functional electrical system that allows the dynamometer to be loaded.</p>
+</div>
+<div class="source-page" data-original-page="10">
+<h2 id="2-design-requirements">2. Design Requirements</h2>
+<h3 id="2-1-overall-system">2.1 Overall System</h3>
+<figure class="report-figure"><svg viewBox="73.5 136.04 468.0 180.75000000000003" role="img" aria-label="Illustration from original report, page 10" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-10.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>Figure ?: Functional Diagram of Dynamometer</p>
+<p>Based on data from the FSAE team’s previous vehicles, the team operates with a final drive gear ratio ranging from the minimum of 3:1 to maximum of 4:1, stepping down the speed from their EMRAX traction motor to the wheels. Although the FSAE team currently imposes operating limits on the EMRAX motor, the dynamometer will be designed based on the peak capability of the EMRAX motor rather than the team&#x27;s current operating limit. This provides a factor of safety to the design and ensures that the dynamometer is not restricted to the team&#x27;s present configuration. Therefore, the dynamometer must be capable of accommodating the range of torque and rotational speed at the wheel hub resulting from these different gear ratios.</p>
+<p>𝐸𝑚𝑟𝑎𝑥 𝑃𝑒𝑎𝑘 𝑅𝑃𝑀 = 6500𝑅𝑃𝑀 𝐸𝑚𝑟𝑎𝑥 𝑃𝑒𝑎𝑘 𝑇𝑜𝑟𝑞𝑢𝑒= 220𝑁𝑚</p>
+<p>𝑀𝑎𝑥 𝑅𝑃𝑀 𝑡𝑜 𝑡ℎ𝑒 ℎ𝑢𝑏 (3: 1) = 6500</p>
+<p>3 ≃ 2167𝑅𝑃𝑀</p>
+<p>𝑀𝑎𝑥 𝑇𝑜𝑟𝑞𝑢𝑒 𝑝𝑒𝑟 ℎ𝑢𝑏 (4: 1) = 220×4</p>
+<p>2 = 440𝑁𝑚</p>
+<p>Hence, as seen in figure ?, the mechanical power that is first translated from the car wheel to the dynamometer will be a maximum torque of approximately 440 Nm for a 4:1 ratio and a maximum speed of approximately 2167 rpm for a 3:1 ratio. The dynamometer then applies a controlled resistance on the car, and the heat and energy generated during this process will be handled by another system. A structural support system will also be required to hold all the components within the dynamometer.</p>
+</div>
+<div class="source-page" data-original-page="11">
+<h3 id="2-2-design-criteria">2.2 Design Criteria</h3>
+<p>Based on the needs of the NUS FSAE team and constraints of the dynamometer system, we came with a list of criteria to evaluate the effectiveness of the concepts:</p>
+<h2 id="1-able-to-withstand-hub-torque-of-440-nm-2-able-to-withstand-hub-speed-of-2167-rpm-3-able-to-withstand-operating-duration-of-15-minutes-per-week-4-compact-and-portable">1. Able to withstand hub torque of 440 Nm 2. Able to withstand hub speed of 2167 RPM 3. Able to withstand operating duration of 15 minutes per week 4. Compact and Portable</h2>
+<p>- Smaller than 50cm (L) x 50cm (W) - Due to limited space available within FSAE workshop 5. Minimal setup complexity</p>
+<p>- Straightforward rigging and disassembly - Easy to set up for testing and break down for storage 6. Easy access for maintenance 7. Ensure modularity for future expansion</p>
+<p>- Perform more advanced testing without complete redesign of system</p>
+<h2 id="3-concept-development">3. Concept development</h2>
+<h3 id="3-1-dynamometer-types">3.1 Dynamometer Types</h3>
+<p>There are mainly two types of dynamometers, namely the chassis dynamometers and hub dynamometers.</p>
+<p>A chassis dynamometer operates similarly to a treadmill, where the vehicle is positioned on rollers that rotate with its wheels. However, this configuration requires a large working area and is generally installed in a fixed location, limiting its portability.</p>
+</div>
+<div class="source-page" data-original-page="12">
+<figure class="report-figure"><svg viewBox="132.75 73.5 346.5 260.25" role="img" aria-label="Illustration from original report, page 12" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-12.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure X: Chassis dynamometer.</p>
+<p>In contrast, a hub dynamometer connects directly to the vehicle&#x27;s wheel hubs, typically consisting of two or four individual dynamometer units. This configuration offers a more compact and portable design, allowing the dynamometer to be moved and stored when not in use.</p>
+<figure class="report-figure"><svg viewBox="147.0 465.22 318.0 212.25" role="img" aria-label="Illustration from original report, page 12" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-12.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure X: Hub dynamometer.</p>
+</div>
+<div class="source-page" data-original-page="13">
+<p>Therefore, due to the limited space available in the FSAE workshop, only the hub dynamometer configuration will be considered for this project.</p>
+<h4 id="3-1-1-passive-vs-active-hub-dynamometers">3.1.1 Passive vs Active Hub Dynamometers</h4>
+<p>Having selected the hub dynamometer configuration, the next consideration is its operating principle. Dynamometers can be further classified into two categories: passive and active dynamometers. The main difference between them lies in their ability to absorb mechanical power from the vehicle or supply mechanical power to drive the vehicle.</p>
+<p>The long-term objective of the project is to develop an active electrical dynamometer, as this would enable more advanced and scenario-based testing for FSAE’s car development. However, within the current project scope, time and budget constraints make the implementation of a fully active dynamometer less feasible. Therefore, a passive electrical dynamometer was selected as the most suitable solution.</p>
+<p>Compared to the hydraulic and mechanical alternatives, the passive electrical dynamometer provides a compact design with relatively simple control and electrical requirements, which is important as the dynamometer will be stored and operated within the FSAE laboratory where space is limited. More importantly, our selection of this dynamometer provides a foundation for future conversion into an active dynamometer by incorporating the necessary power electronics and control. This allows our current project to focus on establishing a functional and reliable passive dynamometer without limiting its future development.</p>
+<div class="table-scroll"><table><tr><th>Passive Dynamometers</th><th></th><th></th><th></th></tr><tr><td>Type</td><td>WHAT THEY DOO</td><td>Advantages</td><td>Disadvantages</td></tr><tr><td>Hydraulic dyno</td><td>A hydraulic dynamometer, commonly known as a liquid brake dynamometer. The medium usually used is oil or water. It is a passive dynamometer that uses fluid resistance to apply a braking load to the device under test. A rotating rotor causes water inside the dynamometer to circulate, creating resistance that opposes</td><td>-High power absorption capability -Relatively simple and robust construction -Lower cost than electrical dynamometer -Liquid is used as a braking medium and heat dissipation medium</td><td>-Poor low speed loading capability as braking torque decreases with rpm. (T =KND) -Breaking resistance is not as precise -Passive dyno where it can only absorb power</td></tr></table></div>
+</div>
+<div class="source-page" data-original-page="14">
+<div class="table-scroll"><table><tr><th></th><th>the rotation. The absorbed mechanical energy is converted into heat and carried away by the water. The braking load can be controlled by regulating the water flow or quantity within the dynamometer. Typically used to test with Internal Combustion Engine (ICE)</th><th></th><th></th></tr><tr><td>Mechanical Friction Dynamometer</td><td>A mechanical dynamometer, or friction dynamometer, is a passive dynamometer that applies a braking load by using mechanical friction. A rotating disc or drum is connected to the motor under test and brake pads would be applied to create the resistive load. The mechanical power absorbed is converted into heat through friction. Torque can be determined from the braking reaction force, while power is calculated from the measured torque and rotational speed.</td><td>- Very simple design and working principle - Low cost - Resistive load can be easily adjusted - Can generate resistive torque at any speeds</td><td>- Wear and tear is more prominent due to high friction - Large amount of heat is generated due to friction, large cooling capability needed - Passive dyno where it can only absorb power - Friction and wear can cause variation in load characteristics over time</td></tr><tr><td>Electrical Dynamometer</td><td>A passive electrical dynamometer uses an electrical motor operating as a generator to provide a load to the motor under test. As the motor drives the generator, mechanical energy is converted into electrical energy and</td><td>- Simpler electrical/ control than the active Dyno - Energy could be conserved - Energy can be dissipated easily</td><td>- Large load banks required - Large amount of cooling required for power resistors - Braking torque is fixed based on electrical load.</td></tr></table></div>
+</div>
+<div class="source-page" data-original-page="15">
+<div class="table-scroll"><table><tr><th></th><th>when connected to a resistive load bank, current flows through the generator, producing an electromagnetic torque that opposes its rotation following Lenz Law and therefore it induces the braking torque.</th><th>through power resistor - No frictional brake wear - Relatively simple control and electronics - More compact than mechanical and hydraulic type</th><th></th></tr><tr><td>Active Dynometer</td><td></td><td></td><td></td></tr><tr><td>Electrical Dynamometer</td><td>An active electrical dynamometer uses a motor that is powered to apply a precise load to the motor under test. The dynamometer can produce an opposing torque that can be controlled with 2 different modes, namely, torque-control mode and speed-control mode allowing the load to be varied electronically. This allows various testing conditions to be carried out.</td><td>- Precise torque and speed control - Allow dynamic environment testing - Able to regenerate energy - No frictional break wear</td><td>- Higher cost - More complex control and power electronics</td></tr></table></div>
+<p class="caption">Table X: Comparison of dynanometer.</p>
+<h3 id="3-2-type-of-motor">3.2 Type of Motor</h3>
+<p>The selection of a suitable dynamometer motor depends on several factors, including torque capacity, rotational speed, efficiency, and cost. Table ………. presents a comparison of different motor options based on their operating characteristics, advantages, and limitations.</p>
+<div class="table-scroll"><table><tr><th>Type</th><th>Operating Principle</th><th>Advantages</th><th>Disadvantages</th></tr></table></div>
+</div>
+<div class="source-page" data-original-page="16">
+<div class="table-scroll"><table><tr><th>Three Phase AC Electric Induction Motor</th><th>Converts electrical energy into mechanical rotation. Can operate as a generator to absorb mechanical power during dynamometer testing.</th><th>• Robust and reliable<br>• Low maintenance<br>• Widely available</th><th>• Requires compatible inverter<br>• Additional integration complexity<br>• Potentially larger and heavier</th></tr><tr><td>Baoluo XYQ-8PC01</td><td>Forklift traction motor designed for high-torque, low-speed operation. Can potentially be used as a dynamometer load with a suitable controller.</td><td>• Compact design<br>• Designed for high starting torque<br>• Suitable for heavy-duty applications</td><td>• Limited rated power (8 kW)<br>• Requires compatible controller<br>• May not meet required speed range</td></tr><tr><td>EMRAX 228</td><td>High-performance axial-flux permanent magnet synchronous motor (PMSM), capable of operating as both a motor and generator.</td><td>• High torque and power density<br>• Compact and lightweight<br>• High efficiency<br>• Already available for the project<br>• Compatible with existing design</td><td>• Requires a compatible inverter<br>• Requires effective cooling</td></tr></table></div>
+<p class="caption">Table X: Comparison of motor.</p>
+<p>The EMRAX 228 was selected as the dynamometer motor due to its compatibility with the FSAE vehicle&#x27;s existing EMRAX traction motor. Its torque and rotational speed characteristics make it suitable for the intended testing conditions, particularly since the FSAE team does not operate its traction motor at full rated capacity. Furthermore, the EMRAX 228 can operate as both a motor and generator, supporting the current passive dynamometer design and potential future conversion to an active dynamometer. The availability of spare EMRAX motors within the FSAE team also reduces procurement costs and promotes component reuse.</p>
+</div>
+<div class="source-page" data-original-page="17">
+<h3 id="3-3-power-dissipation">3.3 Power Dissipation</h3>
+<p>As the passive electric motor concept was selected for the dynamometer, several methods can be considered to manage and dissipate the electrical energy generated by the dynamometer motor during operation.</p>
+<div class="table-scroll"><table><tr><th>Concepts</th><th>What they do</th><th>Advantages</th><th>Disadvantage</th></tr><tr><td>Power Resistor</td><td>The electrical energy generated by the dynamometer motor is converted into heat and dissipated through a suitably rated power resistor.</td><td>- Simplicity - Cheap - Ease of maintenance</td><td>- Energy wastage - Cooling system required to dissipate heat.</td></tr><tr><td>Regenerative Power</td><td>The electrical energy generated by the dynamometer motor will undergo the required power conversion before being used to power electrical loads, with excess power returned to the power grid.</td><td>- Recover generated electricity for use and sale - Reduce net electricity consumption - No battery storage required</td><td>- High initial cost - More complex components required to process electricity before usage and gird - Requires Singapore’s authority and tedious process to return to national grid</td></tr><tr><td>Power bank</td><td>The energy generated by the dyno motor will be stored in a suitably sized battery after rectification and voltage regulation.</td><td>- Stores recovered energy for later usage - Does not require complex grid converters</td><td>- High initial cost - Require battery management system - Battery degradation</td></tr></table></div>
+</div>
+<div class="source-page" data-original-page="18">
+<p class="caption">Table X: Comparison of Power Dissipation Method.</p>
+<p>The power resistor concept was selected due to its simplicity and lower initial cost. Although regenerative and battery storage systems can recover the generated energy, additional power conversion and storage equipment are required, increasing system complexity and cost. Due to the short and infrequent operation of the dynamometer, the electricity savings are insufficient to justify these additional costs. The detailed cost and payback period analysis is provided in Appendix XXX.</p>
+<h3 id="3-4-frame-enclosure">3.4 Frame Enclosure</h3>
+<div class="table-scroll"><table><tr><th>Concepts</th><th>Construction</th><th>Advantages</th><th>Disadvantage</th></tr><tr><td>Truss Frame</td><td>Constructed using interconnected hollow structural members to form a rigid framework.</td><td>- High Strength-Weight ratio - Lesser material usage - Lesser material cost - Allow easy access to components inside</td><td>- Requires multiple joint connections - Joint strength depends on the joining method.</td></tr><tr><td>Metal Plate Frame</td><td>Constructed using metal plates joined together to form a rigid, enclosed structure.</td><td>- Good structural rigidity - Provides protection for components inside - Allow ample space for components mounting</td><td>- Expensive due to amount of material - Heavy due to amount of material - Limited accessibility to install or maintain components</td></tr><tr><td>T-Slot Frame</td><td>Constructed using modular aluminium extrusion profiles connected by brackets and</td><td>- Easy assembly and disassembly - High modularity - Cheap</td><td>- Joint rigidity depends on fasteners - Lower structural rigidity</td></tr></table></div>
+</div>
+<div class="source-page" data-original-page="19">
+<div class="table-scroll"><table><tr><th></th><th>fasteners.</th><th></th><th>- Loosen under vibrations</th></tr></table></div>
+<p class="caption">Table X: Comparison of enclosure type.</p>
+<p>Based on our design criteria, the truss-type frame was selected due to its high strength-to-weight ratio and structural rigidity, which are essential for withstanding the maximum operating torque and vibrations experienced during dynamometer operation. Its lightweight construction also improves portability, while the open-frame design allows easy access to components for maintenance and future upgrades. Furthermore, its efficient use of materials helps minimise fabrication costs, making it a suitable choice within our project budget.</p>
+<h3 id="3-5-frame-joining-concept">3.5 Frame Joining Concept</h3>
+<p>The dynamometer frame must carry the structural and cyclic loads of the test setup while remaining easy to transport and manufacture. Two decisions follow from this: the frame material and the method used to join it.</p>
+<h4 id="3-5-1-frame-design-considerations">3.5.1 Frame Design Considerations</h4>
+<p>Based on our design criteria for the dynamometer, we further specified the frame’s design consideration:</p>
+<div class="table-scroll"><table><tr><th>Criteria</th><th>Explanation</th></tr><tr><td>Structural Strength</td><td>The frame must carry operating loads without excessive deflection.</td></tr><tr><td>Mass</td><td>The frame must be easy to transport.</td></tr><tr><td>Dimensional Accuracy</td><td>Ability to maintain frame geometry and alignment during and after joining.</td></tr><tr><td>Manufacturability</td><td>Ease of manufacturing and assembly.</td></tr><tr><td>Cost</td><td>Fabrication cost should be low.</td></tr></table></div>
+</div>
+<div class="source-page" data-original-page="20">
+<p class="caption">Table X: Comparison of enclosure type.</p>
+<h4 id="3-5-2-frame-joining-methods">3.5.2 Frame Joining Methods</h4>
+<p>The previous year’s frame was constructed from welded steel and weighed approximately 40 kg, making it difficult to transport. As welding is restricted at NUS, fabrication had to be outsourced, resulting in higher costs and longer lead times. Furthermore, their frame experienced warping during fabrication and had to be sent back for rework, further delaying the project. Considering these limitations, a lighter aluminium frame joined through adhesive bonding was proposed as a more convincing alternative.</p>
+<p>Welded Steel Frame</p>
+<p>Welding provides strong, rigid, and reliable joints, making it a well-established method for structural applications. However, welding introduces heat-affected zones (HAZ), which may alter the overall dimensions and material properties near the joints. Furthermore, welding restrictions at NUS require fabrication to be outsourced, resulting in higher costs and longer lead times. Combined with the substantial weight of the previous frame design, these limitations made welded steel less suitable for the project.</p>
+<p>Bonded Aluminum Frame</p>
+<p>Adhesive bonding offers a lightweight alternative without introducing heat distortion or heat-affected zones. An example, the Lotus Elise employs epoxy-riveted bonding to join extruded aluminium sections in its chassis, demonstrating its feasibility in automotive structural applications. Similarly, the dynamometer frame must withstand structural and cyclic loads during operation. Therefore, epoxy bonding supplemented with rivets was proposed, with static shear and fatigue testing planned to verify joint reliability.</p>
+<p>A weighted decision matrix was therefore developed to evaluate both joining methods across 5 different criterias, as shown in Table ……...</p>
+<div class="table-scroll"><table><tr><th>Criteria</th><th>Weight</th><th>Welded Steel Frame</th><th>Bonded Aluminium Frame</th></tr><tr><td>Structural Strength</td><td>30%</td><td>5</td><td>3</td></tr><tr><td>Mass</td><td>20%</td><td>2</td><td>5</td></tr><tr><td>Dimensional Accuracy</td><td>10%</td><td>3</td><td>4</td></tr><tr><td>Manufacturability</td><td>15%</td><td>2</td><td>5</td></tr><tr><td>Cost</td><td>15%</td><td>2</td><td>5</td></tr><tr><td>Total Weighted Score</td><td>100%</td><td>69</td><td>79</td></tr></table></div>
+</div>
+<div class="source-page" data-original-page="21">
+<p>Scores: 1 = Poor, 2 = Below Average, 3 = Moderate, 4 = Good, 5 = Excellent. Weighted totals are normalised to 100.</p>
+<p class="caption">Table X: Comparison of enclosure type.</p>
+<p>Based on the evaluation, epoxy-riveted bonding was selected as the proposed joining method. To verify its suitability for dynamometer operation, two epoxy adhesives, 3M DP490 and EPICOTE 3175, will be evaluated through static shear and fatigue testing to assess their load-carrying capacity and resistance to cyclic loading.</p>
+<h3 id="3-6-power-transmission-concepts">3.6 Power Transmission Concepts</h3>
+<p>The previous design did not account for the FSAE EV’s gear reduction, which increases the torque delivered to the wheel hub beyond the EMRAX 228&#x27;s peak input torque of 220Nm. Therefore, a power transmission system is required to reduce the torque transmitted to the motor.</p>
+<h4 id="3-6-1-power-transmission-system-design-criteria">3.6.1 Power Transmission System Design Criteria</h4>
+<div class="table-scroll"><table><tr><th>Criteria</th><th>Explanation</th></tr><tr><td>Load Capacity</td><td>Ability to transmit high torque and withstand sudden load fluctuations during dynamometer testing.</td></tr><tr><td>Reliability</td><td>Ability to maintain consistent power transmission and a stable speed ratio without slipping or unexpected failure.</td></tr><tr><td>Durability</td><td>Ability to withstand repeated loading and prolonged operation while minimising wear, fatigue and component deterioration.</td></tr><tr><td>Manufacturability</td><td>Ease of fabrication, assembly and integration into the existing dynamometer structure.</td></tr><tr><td>Compactness</td><td>Minimise space requirements and avoid interference with surrounding dynamometer components.</td></tr></table></div>
+<h4 id="3-6-2-types-of-power-transmission-systems">3.6.2 Types of Power Transmission Systems</h4>
+<div class="table-scroll"><table><tr><th>Types of gear systems</th><th>What do they do?</th><th>Advantage</th><th>Disadvantages</th></tr><tr><td>Fixed-Axis Gear Drive</td><td>A fixed-axis gear drive transmits mechanical power between shafts through direct</td><td>- Capacity to transmit high torque. - No slippage,</td><td>- Requires precise gear alignment and positioning. - High costs as system</td></tr></table></div>
+</div>
+<div class="source-page" data-original-page="22">
+<div class="table-scroll"><table><tr><th>Types of gear systems</th><th>What do they do?</th><th>Advantage</th><th>Disadvantages</th></tr><tr><td></td><td>engagement of gear teeth. Different gear sizes allow the transmission to increase or decrease rotational speed and torque.</td><td>ensuring a constant velocity ratio. - High transmission efficiency. - Compact design, small centre distance. - High durability and reliability with proper lubrication.</td><td>requires multiple gears, mounts and casing - Difficult to accommodate changes in shaft centre distance. - Requires lubrication to minimise wear. - Gear meshing may generate noise and vibration.</td></tr><tr><td>Belt drive</td><td>A belt drive is a frictional drive that transmits power between shafts using pulleys and an elastic belt.</td><td>- Affordable due to low component cost and high efficiency - They can transmit power over long distances, contrary to gears, couplings and lead screws - Compared to chain drives, they operate more smoothly and more quietly - They can absorb shock and vibrations - Overload protection through the slipping of the belt - Lightweight and relatively durable - Low maintenance costs</td><td>- Belt slippage can vary the velocity ratio - They apply a heavy load on the bearings and shafts - Finite speed range - Short service life if not maintained well - They need an idler pulley or some adjustment of center distance to compensate for belt stretching and wear - Usually used to reduce speed instead</td></tr><tr><td>Chain drive</td><td>Chain drive is one way of transferring speed and mechanical power from one shaft to another, widely used in</td><td>- They are compact and have small overall dimensions - They have very high efficiency (up</td><td>- Requires precise alignment compared to belt drives - Chain drive require frequent lubrication</td></tr></table></div>
+</div>
+<div class="source-page" data-original-page="23">
+<div class="table-scroll"><table><tr><th>Types of gear systems</th><th>What do they do?</th><th>Advantage</th><th>Disadvantages</th></tr><tr><td></td><td>bicycles and motorcycles. It consists of gear sprockets and roller chains, with the teeth of the gear meshing with the holes in the links of the chain, which transfers mechanical force in the system when they move together.</td><td>to 96%) - No slip and creep during the power transmission, ensure the perfect velocity ratio. - The chain drive is easy to install.</td><td>- Load capacity less compared with gear drives - Conventional chain drive suffers vibrations due to the chordal effect. - The chain drive needs accurate and careful mounting. - They require a tensioning device for adjustments to counter slack.</td></tr></table></div>
+<p class="caption">Table X: Comparison of Power Transmission Types.</p>
+<p>A weighted decision matrix was therefore developed to evaluate both joining methods across 5 different criterias, as shown in Table ……...</p>
+<div class="table-scroll"><table><tr><th>Criteria</th><th>Weight</th><th>Fixed-Axis Gear Drive</th><th>Belt Drive</th><th>Chain Drive</th></tr><tr><td>Load Capacity</td><td>30%</td><td>5</td><td>3</td><td>4</td></tr><tr><td>Reliability</td><td>25%</td><td>5</td><td>3</td><td>4</td></tr><tr><td>Durability</td><td>20%</td><td>2</td><td>4</td><td>5</td></tr><tr><td>Manufacturability</td><td>15%</td><td>2</td><td>4</td><td>4</td></tr><tr><td>Compactness</td><td>10%</td><td>4</td><td>3</td><td>4</td></tr><tr><td>Total Weighted Score</td><td>100%</td><td>3.85</td><td>3.35</td><td>4.2</td></tr></table></div>
+<p>Scores: 1 = Poor, 2 = Below Average, 3 = Moderate, 4 = Good, 5 = Excellent.</p>
+<p>Table.. : Weighted Decision Matrix of Power Transmission Systems Based on the weighted decision matrix, the chain drive achieved the highest score. Although belt drives are relatively affordable and easy to maintain, conventional friction belt drives are susceptible to slippage under high loads, which may affect the consistency of the transmission ratio. In comparison,</p>
+</div>
+<div class="source-page" data-original-page="24">
+<p>fixed-axis gear drives offer high load capacity and reliable power transmission, but are more costly and complex to manufacture.</p>
+<p>The chain drive was therefore selected as it offers high transmission efficiency, reliable power transmission without slippage, and flexibility in achieving the required gear ratio. Furthermore, its components are readily available commercially, making it a more cost-effective and practical solution. Although chain drives require proper alignment, lubrication, and tensioning, these limitations can be addressed through appropriate design and maintenance.</p>
+<h3 id="3-7-tensioner-concept">3.7 Tensioner Concept</h3>
+<p>The chain tensioning mechanism plays an important role in ensuring reliable power transmission between the FSAE vehicle and the dynamometer motor. Proper chain tension is necessary to prevent chain derailment, excessive wear, and vibration during operation. Therefore, different tensioning concepts were evaluated to identify a suitable mechanism for the dynamometer.</p>
+<h4 id="3-7-1-tensioner-design-criteria">3.7.1 Tensioner Design Criteria</h4>
+<p>Based on our design criteria for the dynamometer, we further specified the frame’s design criteria:</p>
+<div class="table-scroll"><table><tr><th>Criteria</th><th>Explanation</th></tr><tr><td>Load Capacity</td><td>Ability to withstand high chain forces and sudden torque fluctuations during dynamometer testing</td></tr><tr><td>Reliability</td><td>Ability to maintain chain tension consistently without failure, loosening or excessive wear</td></tr><tr><td>Durability</td><td>Ability to withstand repeated loading and prolonged operation while minimising wear, fatigue and component deterioration.</td></tr><tr><td>Manufacturability</td><td>Ease of fabrication, assembly, and integration into the existing dynamometer structure</td></tr><tr><td>Compactness</td><td>Minimise space requirements and avoid interference with surrounding components</td></tr></table></div>
+<h4 id="3-7-2-types-of-tensioner">3.7.2 Types of tensioner</h4>
+<div class="table-scroll"><table><tr><th>Types of tensioner</th><th>What do they do?</th><th>Advantage</th><th>Disadvantages</th></tr><tr><td>Manual Take-up/Screw Tensioner</td><td>The mechanism uses a threaded lead screw to manually reposition the</td><td>-Simple and Robust design -Low cost</td><td>-Requires periodic manual adjustment -Incorrect</td></tr></table></div>
+</div>
+<div class="source-page" data-original-page="25">
+<div class="table-scroll"><table><tr><th>Types of tensioner</th><th>What do they do?</th><th>Advantage</th><th>Disadvantages</th></tr><tr><td>Figure ? Screw Type Tensioner</td><td>bearing housing, thereby changing the centre distance between the sprockets. This type of tensioners are commonly found on motorcycles.</td><td>-Suitable for high speed and high load applications</td><td>adjustment can cause over- or under-tensioning -Requires mechanism for bearing housing movement</td></tr><tr><td>Floating Idle/Roll Ring Figure ? Floating Idle and Roll Ring Tensioner</td><td>Roll ring uses one or more free-moving idler sprockets that engage with the chain to remove excess slack. The idlers can be positioned according to the chain condition, helping maintain adequate chain tension without changing the centre distance between the driving and driven sprockets. This type of tensioner is commonly found in food processing equipment.</td><td>-Main shafts and bearings remain fixed, hence very simple design -Relatively simple to install -Takes up chain slack without changing shaft centre distance -Low cost</td><td>-Additional wear and friction -Not suitable for high speed and high load application -Not able to withstand whiplash from sudden torque</td></tr><tr><td>Spring Tensioner Figure ? Spring loaded Tensioner</td><td>A spring-loaded chain tensioner uses compression springs to apply a continuous force to the bearing housing, allowing the shaft and sprocket position to automatically adjust. This maintains the required chain tension and compensates for chain elongation during operation, reducing the need for frequent manual adjustment.</td><td>-Automatically compensates for chain elongation -Maintains tension without adjustment - Can absorb small variations and dynamic chain movement</td><td>-Expensive -More complex than manual adjustment -Spring force must be correctly selected -Bearing/shaft position can move during operation -Less rigid than a fixed/manual bearing arrangement</td></tr></table></div>
+<p class="caption">Table X: Comparison of Tensioner Types.</p>
+</div>
+<div class="source-page" data-original-page="26">
+<p>A weighted decision matrix was therefore developed to evaluate both joining methods across 5 different criterias, as shown in Table ……...</p>
+<div class="table-scroll"><table><tr><th>Criteria</th><th>Weight</th><th>Floating Idle/Roll ring</th><th>Spring Tensioner</th><th>Manual Take-up/ Screw Tensioner</th></tr><tr><td>Load Capacity</td><td>30%</td><td>2</td><td>3</td><td>5</td></tr><tr><td>Reliability</td><td>25%</td><td>3</td><td>5</td><td>4</td></tr><tr><td>Durability</td><td>20%</td><td>2</td><td>3</td><td>5</td></tr><tr><td>Manufacturability</td><td>15%</td><td>5</td><td>2</td><td>4</td></tr><tr><td>Compactness</td><td>10%</td><td>3</td><td>4</td><td>4</td></tr><tr><td>Total Weighted Score</td><td>100%</td><td>2.8</td><td>3.45</td><td>4.5</td></tr></table></div>
+<p>Scores: 1 = Poor, 2 = Below Average, 3 = Moderate, 4 = Good, 5 = Excellent.</p>
+<p>Table.. : Weighted Decision Matrix of Tensioners</p>
+<p>Based on the weighted decision matrix, the manual take-up/screw tensioner achieved the highest score. The manual take-up tensioner was selected due to its high rigidity, load capacity, and simple design, making it suitable for the high torque and speed requirements of the dynamometer.</p>
+<p>Although the spring tensioner automatically compensates for chain elongation, it introduces additional complexity and allows shaft movement during operation, which may affect transmission stability. Whereas, the floating idler may be susceptible to chain whip under sudden load fluctuations, making it less suitable for high-load applications. While the manual take-up tensioner requires periodic adjustment, this can be addressed by providing an easily accessible adjustment mechanism. Therefore, the manual take-up/screw tensioner was considered the most suitable option for the dynamometer.</p>
+<h3 id="3-8-overall-system-diagram">3.8 Overall System Diagram</h3>
+<p>The dynamometer can be split into two overall systems, the mechanical assembly and the electrical assembly. As illustrated in Figure X, mechanical power from the wheel hub is transmitted to the dynamometer through a gearing system that reduces torque and increases rotational speed to match the operating specifications of the dynamometer motor. The dynamometer’s motor will then operate as a generator, converting the mechanical power into AC electrical power, which is subsequently converted into DC electrical power through a rectifier. The generated electrical energy will then be dissipated through a suitable power dissipation system within the electrical assembly. Additionally, cooling systems</p>
+</div>
+<div class="source-page" data-original-page="27">
+<p>will be required for both the mechanical and electrical assemblies to manage heat generated during operation.</p>
+<h2 id="4-detail-design">4. Detail Design</h2>
+<h3 id="4-1-frame">4.1 Frame</h3>
+<figure class="report-figure"><svg viewBox="31.55 198.92 248.61 272.25" role="img" aria-label="Illustration from original report, page 27" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-27.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="273.38 198.92 264.0 272.25" role="img" aria-label="Illustration from original report, page 27" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-27.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>Figure ?: Iteration 1 of frame</p>
+<p>Our first design began with sketching out the overall layout of the components in the frame (Figure ?), which includes the chain drive, motor, shafts and a thick plate across that holds the components. However, we realised that mounting the EMRAX onto the wall of the frame significantly constrains the size of the frame and reduces the space available for the other components, hence we decided to mount the motor downwards instead. The motor mount we will be using is provided by the FSAE team as well, hence no extra manufacturing costs will be needed.</p>
+</div>
+<div class="source-page" data-original-page="28">
+<figure class="report-figure"><svg viewBox="87.0 67.5 255.75 203.25" role="img" aria-label="Illustration from original report, page 28" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-28.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="319.5 78.0 183.0 185.25" role="img" aria-label="Illustration from original report, page 28" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-28.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>Figure ?: Iteration 2, swingarm changed to entire plate, motor mount down For our second iteration, we used 6061-T6 Aluminium hollow beams with a cross section of 31.75mm x 31.75mm, and 1.98mm thick walls to form the overall frame truss structure, and 2 of the beams are solid beams for the tensioner system. From this design, we realised that the right part of the frame does not hold any components, hence could be removed in order to reduce the weight and make the design more compact.</p>
+<figure class="report-figure"><svg viewBox="79.5 393.05 215.25 206.99999999999994" role="img" aria-label="Illustration from original report, page 28" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-28.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="297.75 393.8 234.75 206.24999999999994" role="img" aria-label="Illustration from original report, page 28" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-28.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>Figure ?: Iteration 3, removed the right part</p>
+<p>The final design can be seen in figure ?, where there are thin aluminium sheets to cover the frame up. The sheets are bolted onto the beams as it does not withstand high forces, and allows it to be easily removed to access the components in the frame for maintenance.</p>
+</div>
+<div class="source-page" data-original-page="29">
+<figure class="report-figure"><svg viewBox="78.38 73.5 241.5 222.75" role="img" aria-label="Illustration from original report, page 29" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-29.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="322.88 112.5 210.74 183.75" role="img" aria-label="Illustration from original report, page 29" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-29.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>Figure ?: Reinforcement brackets Since the frame is joined using epoxy, we added L brackets, corner brackets, and triangle brackets at the joints (Figure ?) to reinforce them by increasing the area bonded such that the shear strength of the joints is increased.</p>
+<figure class="report-figure"><svg viewBox="202.5 395.16 207.0 169.49999999999994" role="img" aria-label="Illustration from original report, page 29" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-29.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>Figure ?: Adjustable leg with caster wheel</p>
+<p>Additionally, based on the previous year’s design, we included 4 lockable caster wheels for portability and ease of set-up, while providing stability when locked during dyno runs. A small caster wheel dimension of 5cm was used to allow for the alignment of the motor and the vehicle’s wheel hub, as it is relatively low. The adjustable leg will allow the dynamometer to have height and tilt adjustments to ensure proper alignment of the dyno’s flange and the car’s wheel hub, accommodating both the car’s camber and the floor’s unevenness.</p>
+</div>
+<div class="source-page" data-original-page="30">
+<h3 id="4-2-tensioner">4.2 Tensioner</h3>
+<figure class="report-figure"><svg viewBox="90.75 101.96 208.5 148.5" role="img" aria-label="Illustration from original report, page 30" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-30.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="302.25 103.46 248.04999999999995 167.64000000000004" role="img" aria-label="Illustration from original report, page 30" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-30.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>Figure ?: Iteration 1 of tensioner (right), inspo (left) For the design of our tensioner, we took inspiration from common tensioners used in conveyor systems as seen in Figure ?. We incorporated this design into the thick plate in our frame (figure ?), where the screw to tension the chain drive is in the middle of the plate. However, this design would require rails in order for the tensioner to stay in place and not fall out, which requires a more complicated manufacturing and assembly. Furthermore, the screw being in the middle of the plate restricts access to it and makes tightening the tensioner difficult.</p>
+<figure class="report-figure"><svg viewBox="209.62 395.7 192.76 260.25000000000006" role="img" aria-label="Illustration from original report, page 30" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-30.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>Figure ?: Iteration 2 of the tensioner on one side</p>
+</div>
+<div class="source-page" data-original-page="31">
+<p>Hence, we changed our design to a tensioner block at the side of the thick plate (Figure ?). There are 4 holes on the tensioner, as well as 2 slots on the plate, such that screws can be used to hold the tensioner in place, replacing the rails in a way that is easier to manufacture and assemble. There are also 2 holes at the top and bottom of the tensioner for screws that are attached to the side of the frame, allowing the tensioner to be tightened from the outside of the frame. From this iteration, we then realised that having the tensioner on only one side of the chain drive might cause twisting and turning of the chain during operation due to the high load and speed.</p>
+<figure class="report-figure"><svg viewBox="76.5 197.04 199.5 225.00000000000003" role="img" aria-label="Illustration from original report, page 31" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-31.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="279.0 218.04 256.5 204.00000000000003" role="img" aria-label="Illustration from original report, page 31" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-31.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>Figure ?: Iteration 3, U-shaped tensioner with L bracket</p>
+<p>Hence, we added a U-shaped tensioner to the other side of the chain drive (figure ?). The 4 holes on both tensioners are aligned with each other, such that screws can be used to hold them in place with the slots on the thick plate. An L bracket was also added to the bottom of the U-shape tensioner and the bottom plate of the frame, in order to provide extra support to the tensioner. Both tensioners have 2 holes at the top and bottom which attach to 2 solid beams on the frame for tensioning.</p>
+</div>
+<div class="source-page" data-original-page="32">
+<figure class="report-figure"><svg viewBox="45.98 75.03 242.70000000000002 224.83" role="img" aria-label="Illustration from original report, page 32" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-32.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<h3 id="4-3-flange-and-shaft-design">4.3 Flange and Shaft Design</h3>
+<p>Figure ?: Hub Mount Based on last year’s design, we will be reusing the mount that they designed to connect the wheel hub to the dynamometer. As seen in figure ?, the mount consists of a step inside for the lock nut of the hub, and connects to the hub via dowel pins. The mount has a flange that will then connect to a custom flange and shaft that we designed, which will be able to hold all the components involved for the chain drive, consisting of the driving sprocket, sprocket bracket, and 4 bearings (Figure ?).</p>
+<figure class="report-figure"><svg viewBox="225.75 388.07 160.5 238.50000000000006" role="img" aria-label="Illustration from original report, page 32" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-32.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>Figure ?: Top view of shaft with components</p>
+</div>
+<div class="source-page" data-original-page="33">
+<figure class="report-figure"><svg viewBox="323.62 73.5 201.76 201.75" role="img" aria-label="Illustration from original report, page 33" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-33.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="86.62 74.25 234.0 201.0" role="img" aria-label="Illustration from original report, page 33" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-33.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>Figure ?: 3D Model of shaft (Left), Shaft with components (Right) The shaft holds the 2 sets of bearings in the 2 tensioners respectively, and the splined part of the shaft holds the driving sprocket’s bracket (Figure ?). The sprocket is then attached to the bracket by bolts. The components are held in place either by the step on the shaft or circlips.</p>
+<h3 id="4-4-chain-drive-design">4.4 Chain-drive design</h3>
+<figure class="report-figure"><svg viewBox="155.67 403.64 319.80000000000007 271.23" role="img" aria-label="Illustration from original report, page 33" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-33.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>The two primary design considerations are the sprocket gear ratio, which determines the relationship between motor and wheel hub speeds, and the sprocket centre distance, which affects chain length and tensioning.</p>
+<p>Figure : Chain-drive mechanism</p>
+</div>
+<div class="source-page" data-original-page="34">
+<h4 id="4-4-1-gear-ratio">4.4.1 Gear Ratio</h4>
+<p>As the FSAE race car has a gear drive that ranges between 3 to 4 based on the year’s design, our dynamometer’s gear ratio has to be able to account for the maximum operating conditions of 440 Nm torque (car gear ratio of 1:4) or 2167 RPM speed (car gear ratio of 1:3) from the car.</p>
+<div class="table-scroll"><table><tr><th>Dyno’s Ratio</th><th>Car’s gear ratio</th><th>Speed at EMRAX in dyno (RPM)</th><th>RPM Utilisation</th><th>Torque at EMRAX in dyno (Nm)</th><th>Torque Utilisation</th></tr><tr><td>2.00:1</td><td>1:4</td><td>3250</td><td>50.0%</td><td>220.0</td><td>100.0%</td></tr><tr><td></td><td>1:3</td><td>4333</td><td>66.7%</td><td>165.0</td><td>75.0%</td></tr><tr><td>2.25:1</td><td>1:4</td><td>3656</td><td>56.2%</td><td>195.6</td><td>88.9%</td></tr><tr><td></td><td>1:3</td><td>4875</td><td>75.0%</td><td>146.7</td><td>66.7%</td></tr><tr><td>2.50:1</td><td>1:4</td><td>4062</td><td>62.5%</td><td>176.0</td><td>80.0%</td></tr><tr><td></td><td>1:3</td><td>5417</td><td>83.3%</td><td>132.0</td><td>60.0%</td></tr><tr><td>2.75:1</td><td>1:4</td><td>4469</td><td>68.8%</td><td>160.0</td><td>72.7%</td></tr><tr><td></td><td>1:3</td><td>5958</td><td>91.7%</td><td>120.0</td><td>54.5%</td></tr><tr><td>3.00:1</td><td>1:4</td><td>4875</td><td>75.0%</td><td>146.7</td><td>66.7%</td></tr><tr><td></td><td>1:3</td><td>6500</td><td>100.0%</td><td>110.0</td><td>50.0%</td></tr></table></div>
+<p>Table ?: Comparison of different chain-drive ratios</p>
+<p>Hence, as seen in table ?, we compared the percentage utilisation of the maximum allowable input torque and speed for the EMRAX motor, and concluded that a gear ratio of 2.5:1 balances both torque and speed similarly. For the small driving sprocket, we are using one that has 11 teeth, as the FSAE team has a custom 4340 steel 11 teeth sprocket that consists of the mount to the EMRAX motor and the shaft for the bearing as one piece. As it is the same sprocket used in the car, it will be strong enough for the dynamometer as well since the operating conditions are similar. Furthermore, this allows us to save costs on manufacturing a shaft and mount for the sprocket to the motor. Hence, since the driving sprocket is 11 teeth, and we have chosen a gear ratio of 2.5:1, the driven sprocket would have to be 27.5 teeth. Since this is not possible, we rounded up to use a driven sprocket of 28 teeth, which leads to a gear ratio of 2.55:1.</p>
+</div>
+<div class="source-page" data-original-page="35">
+<h4 id="4-4-2-center-distance">4.4.2 Center distance</h4>
+<p>The sprocket centre distance was selected to achieve a compact chain-drive assembly while maintaining sufficient clearance between the sprockets.</p>
+<p>A 520 roller chain with a pitch of 15.875 mm was selected, connecting the 28-tooth and 11-tooth sprockets.</p>
+<figure class="report-figure"><svg viewBox="180.0 190.92 252.0 182.25000000000003" role="img" aria-label="Illustration from original report, page 35" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-35.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>Figure ?: Chain-drive configuration illustrating the sprocket centre distance.</p>
+<p>Based on the sprocket dimensions, the theoretical minimum centre distance was calculated to be 112.7 mm. Using Renold&#x27;s chain length and centre distance equations, a 42-pitch chain was selected to accommodate the assembly&#x27;s structural constraints while maintaining adequate sprocket clearance.</p>
+<p>The final calculated centre distance was 173.27 mm, providing a compact chain-drive layout. Detailed calculations are provided in Appendix B.</p>
+<h3 id="4-5-bearing">4.5 Bearing</h3>
+<p>Bearing selection is primarily determined by the operating conditions of the application, including the radial and axial loads acting on the bearing and its operating speed. These parameters influence the expected fatigue life of the bearing. For this project, the bearing life requirement was determined by using the internal bearings of the EMRAX 228 motor as a benchmark. The dynamometer bearings are selected to achieve an equivalent or greater theoretical bearing life under the specified operating conditions. This ensures that bearing failure within the dynamometer is not expected to occur before failure of the EMRAX motor bearings, thereby reducing the likelihood of premature bearing failure within our system. Hence, the NSK 6907V and NSK 6910VVCM bearings were selected. The corresponding bearing life calculations are provided in Appendix AAA. An additional consideration in the selection of these bearings was that it is already available to us from the FSAE team thus, cost can be omitted from the project budget, while still satisfying the required performance criteria.</p>
+</div>
+<div class="source-page" data-original-page="36">
+<h3 id="4-6-emrax-cooling">4.6 EMRAX Cooling</h3>
+<p>The EMRAX 228 offers three cooling configurations: air-cooled (AC), liquid-cooled (LC), and combined-cooled (CC). For liquid cooling, the manufacturer specifies a minimum coolant flow rate of 6 L/min and a maximum coolant temperature of 50°C, forming the primary cooling system design constraints.</p>
+<p>Liquid cooling was selected for its effective heat dissipation, compactness, and lower complexity compared to combined cooling. This approach also aligns with the FSAE team&#x27;s previous experience operating the EMRAX 228 under racing conditions.</p>
+<p>The proposed cooling system consists of a 240 mm radiator, dual cooling fans, a coolant reservoir, and a circulation pump, integrated into a compact assembly.</p>
+<p>The cooling circuit is configured as:</p>
+<figure class="report-figure"><svg viewBox="121.5 310.38 369.0 309.75" role="img" aria-label="Illustration from original report, page 36" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-36.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure X: EMRAX 228 liquid cooling circuit</p>
+<p>Pump → Radiator → EMRAX 228 → Reservoir → Pump</p>
+<p>As illustrated in Figure X, coolant from the pump first passes through the radiator before entering the EMRAX 228, where it absorbs heat generated during motor operation. The heated coolant then flows</p>
+</div>
+<div class="source-page" data-original-page="37">
+<p>into the reservoir before returning to the pump, completing the closed-loop cooling circuit. The reservoir is positioned above and directly upstream of the pump to maintain a continuous coolant supply at the pump inlet.</p>
+<p>An EBP40 circulation pump was selected for its maximum flow rate of approximately 35 L/min, exceeding the EMRAX 228&#x27;s minimum requirement of 6 L/min. A 240 mm radiator, similar to that used by the NUS FSAE EV team, was also selected based on its previous application in cooling the EMRAX 228.</p>
+<p>Cooling component specifications are provided in Appendix D.</p>
+<h3 id="4-7-power-resistor-dissipation">4.7 Power Resistor Dissipation</h3>
+<p>The dynamometer system operates with a DC bus voltage of 400 V and a total power dissipation requirement of 80 kW, which gives rise to an equivalent 2Ω requirement. With two dynamometers, each unit is required to dissipate up to 40 kW, with an equivalent resistance of 1 Ω.</p>
+<p>To satisfy these requirements, 50 Ω power resistors rated at 1000 W each were selected. For each dynamometer, 50 resistors are connected in parallel to achieve an equivalent resistance of 1 Ω and a combined rated power dissipation capacity of 50 kW. This provides an additional 10 kW of rated capacity, to accommodate potential load fluctuations.</p>
+<p>Resistor Cooling System Design</p>
+<p>As the electrical energy is converted into heat, an effective cooling system is required to prevent the resistors from overheating. Two design iterations were developed to explore suitable cooling arrangements.</p>
+<p>Design 1</p>
+<p>The initial design consisted of vertically stacked resistors supported by an aluminium frame, with multiple axial fans mounted along one side to provide forced convection cooling. However, the large number of fans increased the complexity of the system in terms of wiring, installation, and maintenance.</p>
+</div>
+<div class="source-page" data-original-page="38">
+<figure class="report-figure"><svg viewBox="55.92 60.74 262.06 235.64999999999998" role="img" aria-label="Illustration from original report, page 38" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-38.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="219.07 73.5 179.56 203.25" role="img" aria-label="Illustration from original report, page 38" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-38.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="371.25 74.25 120.75 202.5" role="img" aria-label="Illustration from original report, page 38" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-38.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure X: Resistor bank design incorporating multiple axial cooling fans.</p>
+<p>Design 2</p>
+<p>The second iteration adopted a more compact resistor arrangement enclosed within a housing. A single 220 V industrial blower operating at 2900 RPM was proposed to replace the multiple axial fans, simplifying the cooling system and reducing the number of components required.</p>
+<p>The enclosure was designed to direct airflow through the resistor bank, allowing heat generated by the resistors to be carried away through forced convection.</p>
+<figure class="report-figure"><svg viewBox="114.75 439.86 138.0 171.75" role="img" aria-label="Illustration from original report, page 38" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-38.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="255.75 439.86 97.5 171.75" role="img" aria-label="Illustration from original report, page 38" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-38.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="356.25 439.11 141.0 172.5" role="img" aria-label="Illustration from original report, page 38" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-38.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure X: Resistor bank design incorporating an industrial blower.</p>
+<p>Cooling System Validation</p>
+<p>Thermal simulations and experimental testing will be conducted to evaluate the cooling performance of the proposed design. The results will be used to assess whether the resistors can operate within their permissible temperature limits under the required power dissipation conditions.</p>
+</div>
+<div class="source-page" data-original-page="39">
+<h2 id="5-testing">5. Testing</h2>
+<h3 id="5-1-epoxy-bonding-test">5.1 Epoxy Bonding Test</h3>
+<p>To justify the proposed epoxy bonding concept and validate its suitability for the dynamometer frame, static lap-shear testing was conducted to evaluate two structural adhesives available in the workshop: 3M DP490 and EPICOTE 3175.</p>
+<p>Two tests will be conducted to evaluate the performance of the adhesive:</p>
+<h2 id="1-static-lap-shear-test-iso-4587-to-determine-the-maximum-load-and-apparent-shear-strength">1. Static Lap-Shear Test (ISO 4587): To determine the maximum load and apparent shear strength</h2>
+<p>of the adhesive joint under static tensile loading. 2. Fatigue Lap-Shear Test (ISO 9664): To evaluate the fatigue resistance of the adhesive joint under</p>
+<p>repeated cyclic shear loading and determine the relationship between applied stress amplitude and the number of cycles to failure (S-N Curve).</p>
+<p>The results of the test are:</p>
+<div class="table-scroll"><table><tr><th></th><th>Breaking Force (kN)</th><th>Shear stress (MPa)</th></tr><tr><td>Test 1</td><td>0.9524</td><td>3.048</td></tr><tr><td>Test 2</td><td>1.1474</td><td>3.672</td></tr><tr><td>Test 3</td><td>0.5408</td><td>1.731</td></tr><tr><td>Average</td><td>0.8802</td><td>2.817</td></tr></table></div>
+<p>Table ?: Static tensile test Results for EPICOTE 3175</p>
+<div class="table-scroll"><table><tr><th></th><th>Breaking Force (kN)</th><th>Shear stress (MPa)</th></tr><tr><td>Test 1</td><td>5.2919</td><td>16.934</td></tr><tr><td>Test 2</td><td>4.4075</td><td>14.104</td></tr><tr><td>Test 3</td><td>4.214</td><td>13.485</td></tr><tr><td>Average</td><td>4.6378</td><td>14.841</td></tr></table></div>
+<p>Table ?: Static tensile test Results for 3M DP490</p>
+<p>Based on the experimental results, 3M DP490 achieved a significantly higher average lap-shear strength of 14.841 MPa compared to EPICOTE 3175 at 2.817 MPa. Therefore, 3M DP490 was selected as the structural adhesive for the dynamometer frame. Experimental Procedure, preparation and calculation can be found in Appendix AAA.</p>
+</div>
+<div class="source-page" data-original-page="40">
+<p>As joints are often critical points of failure in truss frames, further calculations were carried out to compare the strength of the bonded joints against that of the Aluminium 6061-T6 hollow beams. First, the maximum force corresponding to the aluminium beam&#x27;s tensile yield strength was determined. Then, the maximum shear force at each bonded joint was calculated by multiplying the bonded contact area by the obtained shear strength of 3M DP490.</p>
+<p>The objective of this comparison was to demonstrate that the epoxy-bonded joints could achieve a strength equal to, or greater than that of the aluminium beams. If the calculated maximum shear force of the bonded joint exceeds the beam&#x27;s tensile yield capacity, the joint would be expected to withstand a greater load than the beam under assumed loading conditions, supporting the suitability of epoxy bonding for the dynamometer frame.</p>
+<figure class="report-figure"><svg viewBox="73.5 251.92 468.0 260.25" role="img" aria-label="Illustration from original report, page 40" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-40.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>Figure ?: Verified Tensile and Peel Forces at Joints</p>
+<p>For calculation derivations, refer to appendix I.</p>
+</div>
+<div class="source-page" data-original-page="41">
+<h2 id="6-finite-element-analysis">6. Finite Element Analysis</h2>
+<h3 id="6-1-static-structural-simulation">6.1 Static Structural Simulation</h3>
+<p>Static structural simulations were conducted to evaluate the dynamometer&#x27;s ability to withstand the stresses generated by the maximum applied torque of 440 Nm and the weight of the vehicle. Due to the complexity of the system and the large number of components, the dynamometer was divided into several subsystems, as shown in Figure XX. This approach allows each subsystem to be analysed individually, making it easier to identify and resolve potential issues before integrating them into the complete system for final structural analysis.</p>
+<figure class="report-figure"><svg viewBox="73.5 271.57 468.0 213.0" role="img" aria-label="Illustration from original report, page 41" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-41.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure X: Simulation flow for subsystems</p>
+<h3 id="6-1-problems-faced">6.1 Problems Faced</h3>
+<p>Due to the complexity and varying dimensions of the components, three types of finite element models were utilised: beam (1D), shell (2D), and solid (3D) elements. Using 3D solid elements for the entire assembly would significantly increase the number of elements and nodes, resulting in excessive computational demands that exceed the available memory and processing capabilities of our computer.</p>
+<p>However, integrating different element types presents challenges, particularly when establishing connections between beam and shell elements. As shown in Figure XX, the beam centreline is located 15.875 mm away from the shell surface. This separation makes conventional contact definitions challenging, as the beam and shell do not share coincident geometry.</p>
+</div>
+<div class="source-page" data-original-page="42">
+<p>To overcome this limitation, split lines were created on the shell surfaces at the beam attachment locations. Fixed joint connections were then established between the split edges and the corresponding beam elements, allowing loads and moments to be transferred between the two element types.</p>
+<figure class="report-figure"><svg viewBox="171.0 162.71 270.0 191.99999999999997" role="img" aria-label="Illustration from original report, page 42" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-42.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure X: Surface and Beam mesh connection.</p>
+<p>A significant amount of time was dedicated to preparing and simulating the chain-drive assembly due to its complexity. The chain had to be accurately modelled in CAD, with each individual link positioned and mated to the adjacent links. The chain was then assembled around the sprockets, ensuring proper engagement with the sprocket teeth while ensuring no geometric interference between components. This made the CAD preparation process tedious and time-consuming.</p>
+<p>Furthermore, in ANSYS Mechanical, contact regions had to be manually defined between adjacent chain links, as well as between the chain and both the large and small sprockets. As shown in Figure XX, the chain assembly alone required a substantial number of contact definitions, further increasing the complexity of the simulation.</p>
+</div>
+<div class="source-page" data-original-page="43">
+<figure class="report-figure"><svg viewBox="202.5 73.5 207.0 312.0" role="img" aria-label="Illustration from original report, page 43" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-43.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure X:Chain assembly connections.</p>
+<p>Another major challenge was the limited availability of online references and guidance specifically for static structural simulations of chain-drive systems. As a result, extensive trial and error was required to identify suitable ANSYS contact formulations, boundary conditions and analysis settings. Each simulation took approximately two hours to complete, meaning that every unsuccessful attempt required further troubleshooting, adjustments and another lengthy simulation. This iterative process significantly increased the time required to develop a stable and convergent simulation model.</p>
+<p>In addition, high stress concentrations were observed at the interfaces between adjacent chain links, as shown in Figure XX. Further investigation suggested that these unusually high stress values were caused by insufficient mesh refinement and geometric penetration at the contact interfaces, rather than solely by the actual structural loading as seen in figure XX. However, further mesh refinement was restricted by the available computational processing power and memory.</p>
+<p>As the primary objective of this simulation was to evaluate the structural strength of the overall dynamometer assembly, emphasis was placed on ensuring that the chain could transmit reaction forces to the surrounding components for subsequent stress analysis. Furthermore, the same chain is used by the FSAE race car under comparable operating conditions, providing some confidence in its suitability.</p>
+</div>
+<div class="source-page" data-original-page="44">
+<figure class="report-figure"><svg viewBox="178.88 73.5 254.24 267.0" role="img" aria-label="Illustration from original report, page 44" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-44.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure X: Chain simulation results</p>
+<figure class="report-figure"><svg viewBox="73.5 377.65 467.25 133.5" role="img" aria-label="Illustration from original report, page 44" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-44.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="487.5 376.46 52.5 135.0" role="img" aria-label="Illustration from original report, page 44" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-44.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure X: Investigation on geometric penetration of the chain</p>
+<h3 id="6-2-subsystem-simulation-results">6.2 Subsystem Simulation Results</h3>
+<h4 id="6-2-1-frame-and-surface-subsystem">6.2.1 Frame and Surface Subsystem</h4>
+<p class="caption">Figure XX illustrates the loading and boundary conditions applied to the frame and beam subsystem, where an arbitrary force was applied to the top plate while the bottom beams were fixed. The simulation results demonstrate successful load transfer between the shell and beam elements, with stresses distributed throughout the structure. Relatively low stresses were observed in the unloaded plates, while the beams carried the majority of the structural loads, as intended by the design.</p>
+</div>
+<div class="source-page" data-original-page="45">
+<figure class="report-figure"><svg viewBox="197.62 73.5 216.76 198.75" role="img" aria-label="Illustration from original report, page 45" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-45.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure X: Frame and Surface Subsystem setup</p>
+<figure class="report-figure"><svg viewBox="101.25 315.4 181.5 175.5" role="img" aria-label="Illustration from original report, page 45" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-45.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="285.75 315.4 225.0 175.5" role="img" aria-label="Illustration from original report, page 45" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-45.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="182.25 497.16 247.5 182.24999999999994" role="img" aria-label="Illustration from original report, page 45" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-45.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure X: Simulation results for Frame and Surface Subsystem</p>
+</div>
+<div class="source-page" data-original-page="46">
+<h4 id="6-2-2-chain-drive-subsystem">6.2.2 Chain drive Subsystem</h4>
+<p>For the chain-drive subsystem shown in figure XX, the maximum torque of 440 Nm was applied at the hub mount (B), while fixed supports were applied at the two mounting locations (A) to represent their connections to the beam frame and allow reaction forces to be transferred. A cylindrical support was also applied to the sprocket (C) to restrict both radial movement and rotation to represent the drivetrain at a particular instant under static loading.</p>
+<figure class="report-figure"><svg viewBox="75.0 194.36 195.75 195.75" role="img" aria-label="Illustration from original report, page 46" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-46.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="273.75 194.36 263.25 195.75" role="img" aria-label="Illustration from original report, page 46" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-46.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure X: Chain drive Subsystem setup</p>
+<p>The following figure XX to XX shows the simulation results of the individual components, all of which has high factors of safety, indicating that the selected materials and component designs are suitable for the applied static loading conditions.</p>
+<figure class="report-figure"><svg viewBox="79.5 488.14 213.75 183.75" role="img" aria-label="Illustration from original report, page 46" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-46.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="296.25 488.14 236.25 183.75" role="img" aria-label="Illustration from original report, page 46" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-46.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure X: Simulation results of a tensioner plate</p>
+</div>
+<div class="source-page" data-original-page="47">
+<figure class="report-figure"><svg viewBox="79.12 79.5 221.79000000000002 165.85" role="img" aria-label="Illustration from original report, page 47" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-47.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="294.38 79.5 238.5 156.0" role="img" aria-label="Illustration from original report, page 47" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-47.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure X: Simulation results of a shaft</p>
+<figure class="report-figure"><svg viewBox="109.88 284.65 184.5 197.25" role="img" aria-label="Illustration from original report, page 47" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-47.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="297.38 284.65 204.74 197.25" role="img" aria-label="Illustration from original report, page 47" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-47.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure X: Simulation results of a tensioner</p>
+<figure class="report-figure"><svg viewBox="79.12 531.05 206.26 161.25" role="img" aria-label="Illustration from original report, page 47" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-47.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="288.38 531.05 244.5 161.25" role="img" aria-label="Illustration from original report, page 47" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-47.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure X: Simulation results of a hub mount</p>
+</div>
+<div class="source-page" data-original-page="48">
+<figure class="report-figure"><svg viewBox="105.0 94.94 183.0 170.25" role="img" aria-label="Illustration from original report, page 48" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-48.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="291.0 94.94 216.0 170.25" role="img" aria-label="Illustration from original report, page 48" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-48.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure X: Simulation results of a sprocket bracket</p>
+<figure class="report-figure"><svg viewBox="138.38 308.34 335.24 292.50000000000006" role="img" aria-label="Illustration from original report, page 48" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-48.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure X: Deformation of the tensioner plate and tensioner.</p>
+</div>
+<div class="source-page" data-original-page="49">
+<h3 id="6-3-future-simulation-work">6.3 Future Simulation work</h3>
+<p>Ultimately, the final static structural simulation will integrate all mechanical components of the dynamometer into a complete assembly. Fixed supports will be applied at the four corners of the bottom frame, where the caster wheels will be mounted. A maximum torque of 440 Nm will be applied at the hub, together with a downward force of approximately 490.5 N to represent the vehicle&#x27;s weight of 50 kg. Figure XX illustrates the preliminary assembly of the complete dynamometer system.</p>
+<figure class="report-figure"><svg viewBox="73.5 197.17 468.0 351.0" role="img" aria-label="Illustration from original report, page 49" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-49.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure X: Expected setup of full system.</p>
+<p>The simulation results will be used to evaluate the overall structural strength and rigidity of the dynamometer by analysing the stress distribution, deformation and factors of safety under the specified loading conditions.</p>
+<p>Additionally, thermal and airflow simulations of the braking resistor system will be conducted in the following semester to evaluate its heat dissipation and cooling requirements, supporting the final selection and design of the electrical system.</p>
+</div>
+<div class="source-page" data-original-page="50">
+<h2 id="7-project-plan">7. Project Plan</h2>
+<p>For the following semester, the main objective will be to complete the static structural simulation to validate our design and finalise the electrical assembly based on heat flow simulation results.</p>
+<p>Once the design has been validated, we will proceed with the fabrication and assembly of the dynamometer, followed by structural and fixed-load testing to verify its performance.</p>
+<p>Finally, we will complete the project documentation and conclude Phases 1 and 2 of the dynamometer development.</p>
+<figure class="report-figure"><svg viewBox="102.75 257.67 406.5 253.5" role="img" aria-label="Illustration from original report, page 50" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-50.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p class="caption">Figure X: Gantt Chart for semester 2</p>
+<h2 id="8-conclusion">8. Conclusion</h2>
+<p>Throughout this semester, we have gained a better understanding of the problem statement and stakeholder requirements, allowing us to establish clear project objectives.</p>
+<p>Taking into account the project constraints, we developed and evaluated different concepts before selecting the most suitable solutions for our dynamometer.</p>
+<p>We then proceeded with the detailed design and conducted a series of tests and simulations to validate our design decisions.</p>
+</div>
+<div class="source-page" data-original-page="51">
+<p>Despite the challenges encountered, we managed to address the issues and remain on track with our project timeline.</p>
+</div>
+<div class="source-page" data-original-page="52">
+<h2 id="appendix-a-emrax-specification">Appendix A - EMRAX Specification</h2>
+<figure class="report-figure"><svg viewBox="86.25 121.58 439.5 591.0" role="img" aria-label="Illustration from original report, page 52" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-52.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+</div>
+<div class="source-page" data-original-page="53">
+<figure class="report-figure"><svg viewBox="73.5 73.5 468.0 630.75" role="img" aria-label="Illustration from original report, page 53" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-53.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+</div>
+<div class="source-page" data-original-page="54">
+<figure class="report-figure"><svg viewBox="73.5 73.5 468.0 623.25" role="img" aria-label="Illustration from original report, page 54" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-54.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+</div>
+<div class="source-page" data-original-page="55">
+<h2 id="appendix-b-dynapack-daq53-quotation-prices">Appendix B - Dynapack DAQ53 Quotation Prices</h2>
+<figure class="report-figure"><svg viewBox="98.25 121.58 415.5 580.5" role="img" aria-label="Illustration from original report, page 55" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-55.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+</div>
+<div class="source-page" data-original-page="56">
+<h2 id="appendix-c-chain-drive-calculations">Appendix C - Chain Drive Calculations</h2>
+<p>The centre distance of the chain drive was selected with the objective of achieving a compact dynamometer assembly while maintaining sufficient clearance between the two sprockets.</p>
+<figure class="report-figure"><svg viewBox="180.0 150.46 252.0 182.24999999999997" role="img" aria-label="Illustration from original report, page 56" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-56.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>A 520 chain, with a pitch of</p>
+<p>𝑃= 15. 875𝑚𝑚</p>
+<p>was selected. The driver and driven sprockets have 28 and 11 teeth, respectively:</p>
+<p>𝑍1 = 28, 𝑍2 = 11</p>
+<p>The outer radii of the two sprockets are measured to be:</p>
+<p>𝑅1 = 75. 2𝑚𝑚, 𝑅2 = 37. 5𝑚𝑚</p>
+<p>Therefore, the theoretical minimum centre distance required to prevent physical interference between the sprockets is:</p>
+<p>𝐶min = 𝑅1 + 𝑅2</p>
+<p>Therefore,</p>
+<p>𝐶min = 112. 7𝑚𝑚</p>
+<p>Since a compact drivetrain was desired, this minimum value was initially used as the contemplated centre distance.</p>
+<p>Using the Renold chain-length equation,</p>
+</div>
+<div class="source-page" data-original-page="57">
+<figure class="report-figure"><svg viewBox="168.75 73.5 274.5 69.0" role="img" aria-label="Illustration from original report, page 57" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-57.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>Substituting the values in gives,</p>
+<p>2 15.875</p>
+<p>𝐿= 2(112.7)</p>
+<h3 id="15-875-28-11">15.875 + 28+11</h3>
+<p>2 + 11−28</p>
+<p>2π ( )</p>
+<h3 id="112-7-34-73-pitches">112.7 = 34.73 pitches</h3>
+<p>This gives us the minimum number of chain links that we will use. Additionally, a roller chain must contain a whole number of pitches, and Renold recommends the use of an even number of pitches to avoid the use of a cranked link. Furthermore, for optimum wear life, Renold states that it is recommended that centre distance between two sprockets should be within 30-50 times the chain pitch. Due to structural constraints of the components, we have identified the number of chain links to be L = 42 pitches. Using Renold&#x27;s centre-distance equation,</p>
+<figure class="report-figure"><svg viewBox="111.0 358.98 390.0 129.33999999999997" role="img" aria-label="Illustration from original report, page 57" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-57.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="205.5 463.56 201.0 59.24999999999994" role="img" aria-label="Illustration from original report, page 57" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-57.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>Gives,</p>
+<p>2 − π 3.88 (11 −28)</p>
+<p>𝐶= 15.875</p>
+<p>2 ⎡⎢⎣</p>
+<p>⎤⎥⎦ = 173.27mm</p>
+<p>8 2(42) −11 −28 + [2(42) −11 −28]</p>
+<p>Thus, a 42-pitch chain and centre distance of 173.27 mm were adopted for the final design, providing adequate sprocket clearance while maintaining a relatively compact drivetrain layout.</p>
+</div>
+<div class="source-page" data-original-page="58">
+<h2 id="appendix-d-cooling-specification-and-component-selection">Appendix D - Cooling Specification and Component Selection</h2>
+<p>EMRAX 228 Cooling Requirements</p>
+<figure class="report-figure"><svg viewBox="132.75 151.09 346.5 126.74999999999997" role="img" aria-label="Illustration from original report, page 58" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-58.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>Pump Selection Radiator Selection</p>
+<figure class="report-figure"><svg viewBox="73.5 299.55 246.75 293.99999999999994" role="img" aria-label="Illustration from original report, page 58" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-58.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="323.25 454.8 195.0 138.74999999999994" role="img" aria-label="Illustration from original report, page 58" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-58.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+</div>
+<div class="source-page" data-original-page="59">
+<h2 id="appendix-e-payback-period-analysis-for-power-bank">Appendix E - Payback Period Analysis for Power bank</h2>
+<p>Payback Period Analysis for Battery Energy Storage</p>
+<p>Taking the two extreme operating conditions of the FSAE vehicle and accounting for the dynamometer&#x27;s gear ratio of 2.5:1, the EMRAX 228 will operate at either 176 Nm at 4062 RPM or 132 Nm at 5417 RPM. Both conditions result in approximately the same mechanical power.</p>
+<p>Mechanical power:</p>
+<p>= 𝑃𝑜𝑤𝑒𝑟= 𝑇𝑜𝑟𝑞𝑢𝑒 𝑥 ⍵ 176 𝑋 2𝜋(4062)/60 = 74. 9𝑘𝑊</p>
+<p>The FSAE team requires the dynamometer to operate for 15 minutes per week. Assuming continuous full-load operation throughout each test, the annual energy generated is:</p>
+<p>Energy (per test) = 15/60 x 74.9 = 18.7kWh Energy (annual) = 18.7 x 52 = 973.7kWh/year</p>
+<p>Based on the Singapore regulated electricity tariff of S$0.3116/kWh (including GST) for October–December 2026, and assuming 100% energy recovery efficiency, the maximum annual electricity savings are: Payback = 973.7 x 0.3116 = $303.4/year</p>
+<p>Battery Selection</p>
+<p>The battery must accommodate approximately 75 kW of charging power and 18.7 kWh of energy per test. Therefore, An industrial high-power lithium iron phosphate (LiFePO₄) battery energy storage system is considered due to its ability to support high charging rates with appropriate battery management and thermal protection. A commercial 50kWh/100kW BESS is sold by at US$8000-10600.</p>
+<p>For this preliminary analysis, we take an : $10200SGD</p>
+<p>Payback duration would be $10200 / $303.4 = 33.6 years</p>
+<p>The estimated payback period is approximately 34 years, even under the ideal assumption of 100% energy recovery. In practice, the payback period would be longer due to energy conversion losses, additional power electronics, maintenance and battery degradation. Hence, battery energy storage is not economically justified for the expected operating frequency of the dynamometer.</p>
+</div>
+<div class="source-page" data-original-page="60">
+<h2 id="appendix-f-payback-period-analysis-for-regenerative-power">Appendix F — Payback Period Analysis for Regenerative Power</h2>
+<p>Taking the mechanical power calculated in Appendix D of 74.9 kW and the FSAE team&#x27;s requirement of 15 minutes of operation per week, the annual energy generated is approximately 973.7 kWh/year.</p>
+<p>Assuming 100% energy recovery efficiency and an electricity selling price of S$0.2581/kWh, the maximum annual revenue from exporting electricity to Singapore&#x27;s power grid is:</p>
+<p>Payback revenue = 973.7 x 0.2581 = $251.31</p>
+<p>Grid-Tied Inverter Selection</p>
+<p>To return the generated electricity to the power grid, a grid-tied inverter is required to convert the rectified DC voltage into grid-compatible AC electricity. A 100 kW Huawei SUN2000-100KTL-M1 three-phase grid-tied inverter was considered, with a listed price of €5,625.00.</p>
+<p>For this preliminary analysis, we take an : ≃ $8000SGD</p>
+<p>Payback duration would be $8000 / $251.31 = 31.8 years</p>
+<p>The estimated payback period is approximately 32 years , even under the ideal assumption of 100% energy recovery. In practice, the payback period would be longer due to additional power conversion equipment, grid connection and protection requirements, installation costs and energy losses. In addition regulatory approval is required to export electricity generated by the dynamometer to Singapore&#x27;s power grid. The FSAE team had previously applied for approval to implement a regenerative power system, but the application was unsuccessful. Therefore this option is ruled out.</p>
+</div>
+<div class="source-page" data-original-page="61">
+<h2 id="appendix-g-cost-analysis-for-power-resistor-dissipation">Appendix G — Cost Analysis for Power Resistor Dissipation</h2>
+<p>The power resistor concept dissipates the electrical energy generated by the dynamometer as heat. Based on the mechanical power calculated in Appendix A, the dynamometer operates at approximately 74.9 kW under full-load conditions.</p>
+<p>The selected resistor model is the RXLG-1kW aluminium-housed braking resistor, rated at 1 kW per unit. A total of 100 resistors are considered, with 50 resistors allocated to each wheel, providing a combined nominal dissipation capacity of 100 kW. However, as the scope of this project is limited to building a one side of the dynamometer, only 50 resistors are required, providing a nominal dissipation capacity of 50 kW.</p>
+<p>A commercial RXLG-1kW resistor is listed at SGD16.50 per unit. The total cost needed for this project would be $16.50 x 50 = $825. Therefore, making this the most viable option.</p>
+</div>
+<div class="source-page" data-original-page="62">
+<h2 id="appendix-h-bearing-life-analysis">Appendix H —Bearing Life Analysis</h2>
+<p>The Formula SAE (FSAE) race car has an estimated total mass of 200 kg. Assuming that the vehicle weight is equally distributed across all four wheels, the equivalent mass supported by each wheel can be calculated as:</p>
+<p>𝑊𝑒𝑖𝑔ℎ𝑡 𝑑𝑖𝑠𝑡𝑟𝑖𝑏𝑢𝑡𝑖𝑜𝑛 𝑜𝑛 𝑎 𝑤ℎ𝑒𝑒𝑙= 200/4 = 50 𝑘𝑔 ≈ 500𝑁</p>
+<p>For the purpose of this analysis, an equivalent radial load of 500 N is assumed, with axial loading considered negligible. This provides a simplified basis for comparing the theoretical fatigue life of the EMRAX 228 motor bearings against the selected dynamometer bearings.</p>
+<p>As the dynamometer operates at relatively high rotational speeds, bearings suitable for high-speed applications were prioritised. However, the selected thin-section bearings have lower basic dynamic load ratings compared to the EMRAX motor bearings. To compensate for this, two bearings are used at each bearing location to distribute the applied load. Assuming equal load distribution between the two bearings, the radial load experienced by each bearing is:</p>
+<p>𝐸𝑎𝑐ℎ 𝑏𝑒𝑎𝑟𝑖𝑛𝑔 𝑙𝑜𝑎𝑑 = 500/2 = 250𝑁</p>
+<p>Two bearing locations are considered in the analysis:</p>
+<p>Assuming the worst case condition of the FSAE car driving at full load, the car’s Emrax peak at 6500RPM.</p>
+<p>1) Bearing A (NSK 6910VVCM): Located at the hub-side shaft where RPM is determined by the</p>
+<p>selection of the FSAE car dive ratio. The maximum RPM is when a gear ratio of 3:1 is selected.</p>
+<p>𝑅𝑃𝑀 𝑎𝑡 𝑏𝑒𝑎𝑟𝑖𝑛𝑔 𝐴 = 6500/3 = 2167𝑅𝑃𝑀</p>
+<p>2) Bearing B (NSK 6907V): Located on the dynamometer shaft after the chain-and-sprocket drive</p>
+<p>transmission of 2.5:1.</p>
+<p>𝑅𝑃𝑀 𝑎𝑡 𝑏𝑒𝑎𝑟𝑖𝑛𝑔 𝐵 = 2167 𝑋 2. 5 = 5417𝑅𝑃𝑀</p>
+<p>The theoretical fatigue life of each bearing is subsequently calculated and compared against the EMRAX 228 motor bearing benchmark to evaluate its suitability for the dynamometer. The table XX shows the parameters for our calculation.</p>
+<div class="table-scroll"><table><tr><th>Bearings:</th><th>Dyno’s Emrax 228</th><th>Bearing A NSK 6910VVCM</th><th>Bearing B NSK 6907V</th></tr><tr><td>RPM</td><td>5417</td><td>2167</td><td>5417</td></tr><tr><td>Radial Force</td><td>500N</td><td>250N</td><td>250N</td></tr></table></div>
+</div>
+<div class="source-page" data-original-page="63">
+<p>In the Emrax there are 2 bearings, FAG3206 and FAG6206. We will calculate the Life expectancy using ISO 281 bearing life equation and take the lowest one for the benchmark.</p>
+<p>EMRAX FAG 6206 :</p>
+<p>6</p>
+<p>3 = 221500 𝐻𝑜𝑢𝑟𝑠</p>
+<p>𝐶𝑟 = 20. 8𝑘𝑁 𝐿₁₀ = 10</p>
+<p>60(5417) ( 20800</p>
+<p>500 )</p>
+<p>EMRAX FAG 3206:</p>
+<p>6</p>
+<p>3 = 733200 𝐻𝑜𝑢𝑟𝑠</p>
+<p>𝐶𝑟 = 31𝑘𝑁 𝐿₁₀ = 10</p>
+<p>60(5417) ( 31000</p>
+<p>500 )</p>
+<p>Bearing A NSK 6910VVCM:</p>
+<p>6</p>
+<p>3 = 2016200 𝐻𝑜𝑢𝑟𝑠</p>
+<p>𝐶𝑟 = 16𝑘𝑁 𝐿₁₀ = 10</p>
+<p>60(2167) ( 16000</p>
+<p>250 )</p>
+<p>Bearing B NSK 6907V:</p>
+<p>6</p>
+<p>3 = 307300 𝐻𝑜𝑢𝑟𝑠</p>
+<p>𝐶𝑟 = 11. 6𝑘𝑁 𝐿₁₀ = 10</p>
+<p>60(5417) ( 11600</p>
+<p>250 )</p>
+<div class="table-scroll"><table><tr><th>Comparison Table</th><th>Life Expectancy (Hours)</th></tr><tr><td>EMRAX FAG 6206</td><td>221,500 h</td></tr><tr><td>NSK 6910VVCM</td><td>2,016,200 h</td></tr><tr><td>NSK 6907V</td><td>307,300 h</td></tr></table></div>
+<p>Based on the bearing life calculations, the EMRAX 228 FAG 6206 bearing was used as the benchmark, as it has the lowest theoretical fatigue life among the motor&#x27;s internal bearings. Under the assumed operating conditions, both selected dynamometer bearings demonstrated a longer theoretical fatigue life than the benchmark. Therefore, the NSK 6910VVCM and NSK 6907V bearings were concluded to be suitable for the dynamometer based on the preliminary bearing life analysis.</p>
+</div>
+<div class="source-page" data-original-page="64">
+<h2 id="appendix-i-epoxy-bonding-test">Appendix I - Epoxy Bonding Test</h2>
+<p>Preparation of Specimen</p>
+<p>The specimens will be prepared using a single-lap-joint configuration based on ISO 4587:2003.</p>
+<div class="table-scroll"><table><tr><th>Parameters</th><th>Dimensions(mm)</th></tr><tr><td>Length of strip</td><td>100±0.25</td></tr><tr><td>Width of strip</td><td>25</td></tr><tr><td>Thickness of strip</td><td>1.6</td></tr><tr><td>Length of Overlap</td><td>12.5</td></tr><tr><td>Adhesive thickness</td><td>0.2</td></tr></table></div>
+<p>Number of Specimen</p>
+<div class="table-scroll"><table><tr><th>Static Test</th><th>Fatigue Test</th><th></th><th></th></tr><tr><td>3 Sets</td><td>Amplitude 1</td><td>Amplitude 2</td><td>Amplitude 3</td></tr><tr><td></td><td>2 set each</td><td></td><td></td></tr><tr><td>Total: 18 strips</td><td></td><td></td><td></td></tr></table></div>
+<p>Surface Preparation</p>
+<p>The bonding surfaces will be prepared consistently to minimise variations in adhesive performance caused by surface contamination or irregularities.</p>
+<p>The following procedure was adopted:</p>
+<p>1. wq</p>
+<p>Adhesive preparation and curing</p>
+<p>Epicote 3175 consists of two components, Part A and Part B, which were mixed at a ratio of 1:1 prior to application. A 0.2 mm shim was used to control the adhesive bond-line thickness and ensure consistency across the specimens.</p>
+</div>
+<div class="source-page" data-original-page="65">
+<figure class="report-figure"><svg viewBox="55.5 192.13 468.0 351.90999999999997" role="img" aria-label="Illustration from original report, page 65" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-65.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>The mixed epoxy was applied uniformly onto the designated overlap area of one metallic strip before being joined to the second strip to form a single-lap joint. G-clamps were then used to apply compressive pressure to the bonded assembly, maintaining contact between the adherends and the required adhesive thickness during curing.</p>
+<figure class="report-figure"><svg viewBox="73.5 502.55 149.25 111.74999999999994" role="img" aria-label="Illustration from original report, page 65" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-65.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>The specimens were subsequently left to cure for seven days before undergoing static and fatigue lap-shear testing.</p>
+<p>Experimental Procedure</p>
+<p>The machine used in both static and fatigue is the instron 8501.</p>
+</div>
+<div class="source-page" data-original-page="66">
+<p>Static</p>
+<h2 id="1-mount-the-specimen-symmetrically-in-the-tensile-testing-machine-2-position-each-grip-approximately-50-1-mm-from-the-nearest-edge-of-the-bonded-overlap-as">1. Mount the specimen symmetrically in the tensile testing machine. 2. Position each grip approximately 50 ± 1 mm from the nearest edge of the bonded overlap, as</h2>
+<p>specified in ISO 4587. 3. Ensure the specimen is properly aligned with the loading direction. Suitable shims may be used</p>
+<p>to minimise unintended bending. 4. Apply tensile loading at a constant test speed selected such that the average specimen fails</p>
+<p>within 65 ± 20 seconds. 5. Continue loading until failure occurs. 6. Record the maximum force sustained by the specimen, (F_{\max}). 7. Inspect and photograph the failed specimen. Record whether failure occurred within the</p>
+<p>adhesive, at the adhesive-metal interface, or within the metallic adherend. 8. Repeat the procedure for all 3 specimens.</p>
+<p>From the data, we determined the shear stress from the 3 samples:</p>
+<p>Shear stress = Fmax / Area</p>
+<p>The average static lap-shear strength is: ⅓ (τ1 + τ2 + τ3)</p>
+<p>Fatigue</p>
+<p>The fatigue lap-shear test will evaluate the resistance of the adhesive joint to repeated tensile-shear loading.</p>
+<p>The mean stress was determined by following the ISO standard recommendation of 0.35x τstatic.</p>
+<p>τmean = 0.35(τstatic)</p>
+<p>Selection of 3 different stress amplitude to maintain tensile-tensile cyclic conditions. According to ISO 9664, preliminary fatigue tests may be required to identify suitable stress amplitudes that produce failure between (10^4) and (10^6) cycles.</p>
+<h2 id="1-mount-a-new-specimen-in-the-fatigue-testing-machine-using-suitable-aligned-grips-2-configure-the-machine-for-sinusoidal-load-controlled-fatigue-testing-3-set-the-mean-force-f-m-based-on-the-selected-mean-stress-4-set-the-force-amplitude-f-a-corresponding-to-the-selected-stress-amplitude-5-set-the-testing-frequency-to-30-hz-subject-to-machine-capability-and-confirmation-that-excessive">1. Mount a new specimen in the fatigue testing machine using suitable aligned grips. 2. Configure the machine for sinusoidal load-controlled fatigue testing. 3. Set the mean force, (F_m), based on the selected mean stress. 4. Set the force amplitude, (F_a), corresponding to the selected stress amplitude. 5. Set the testing frequency to 30 Hz, subject to machine capability and confirmation that excessive</h2>
+<p>specimen heating does not occur.</p>
+</div>
+<div class="source-page" data-original-page="67">
+<h2 id="6-apply-the-mean-load-and-gradually-establish-the-required-cyclic-loading-conditions-7-continue-cyclic-loading-until-the-specimen-fails-or-reaches-the-predetermined-run-out-limit-of">6. Apply the mean load and gradually establish the required cyclic loading conditions. 7. Continue cyclic loading until the specimen fails or reaches the predetermined run-out limit of</h2>
+<p>(10^6) cycles. 8. Record the number of cycles to failure, (N), together with the failure mode. 9. For specimens surviving (10^6) cycles, record the result as a run-out rather than a failure. 10.Repeat the test three specimens at each selected stress amplitude. 11.Repeat the procedure for the remaining stress amplitudes.</p>
+<p>From the data, the relationship between cyclic stress amplitude and number of cycles to failure will be determined through the construction of a stress-life (S-N) curve.</p>
+</div>
+<div class="source-page" data-original-page="68">
+<h2 id="appendix-j-shear-forces-at-joints">Appendix J - Shear Forces at Joints</h2>
+<p>Aluminium 6061-T6:</p>
+<figure class="report-figure"><svg viewBox="242.62 141.02 126.75999999999999 140.99999999999997" role="img" aria-label="Illustration from original report, page 68" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-68.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>Given:</p>
+<p class="bullet">● Cross-sectional area, A = 235.78 mm² ● Tensile yield strength, σᵧ = 276 MPa</p>
+<p>The maximum force corresponding to tensile yielding is:</p>
+<p>= (276MPa × 235.78mm²) = 65,075.28 N 𝐹𝐴𝑙= σ𝑦𝐴𝐴𝑙</p>
+<p>3M DP490:</p>
+<p>Taking a specific joint as an example,</p>
+<p>Given:</p>
+<p class="bullet">● Experimental shear strength, τ = 14.841 MPa = 14.841 N/mm² ● Bonded area 1 = 2,035 mm² ● Bonded area 2 = 2,540 mm² ● Bonded area 3 = 1,587.5 mm² (2 surfaces)</p>
+</div>
+<div class="source-page" data-original-page="69">
+<figure class="report-figure"><svg viewBox="109.5 73.5 216.75 128.25" role="img" aria-label="Illustration from original report, page 69" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-69.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="329.25 73.5 198.0 128.25" role="img" aria-label="Illustration from original report, page 69" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-69.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="109.5 208.02 219.75 170.24999999999997" role="img" aria-label="Illustration from original report, page 69" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-69.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<figure class="report-figure"><svg viewBox="332.25 208.02 195.75 170.24999999999997" role="img" aria-label="Illustration from original report, page 69" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-69.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+<p>= A₁ + A₂ + 2A₃ 𝐴𝑡𝑜𝑡𝑎𝑙</p>
+<p>= 2035 + 2540 + 2(1587.5)</p>
+<p>= 7,750 mm²</p>
+<p>= τ × 𝐹𝑒𝑝𝑜𝑥𝑦 𝐴𝑡𝑜𝑡𝑎𝑙</p>
+<p>= 14.841 × 7,750</p>
+<p>= 115,017.75 N</p>
+<p>The estimated epoxy shear capacity is approximately 76.7% greater than the aluminium beam&#x27;s tensile yield capacity. This calculation is then repeated for the other joints around the truss as well.</p>
+</div>
+<div class="source-page" data-original-page="70">
+<figure class="report-figure"><svg viewBox="73.5 73.5 462.0 656.25" role="img" aria-label="Illustration from original report, page 70" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-70.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+</div>
+<div class="source-page" data-original-page="71">
+<figure class="report-figure"><svg viewBox="73.5 73.5 495.0 492.0" role="img" aria-label="Illustration from original report, page 71" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-71.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
+</div>
+<div class="source-page" data-original-page="72">
+<h2 id="appendix-k">Appendix K -</h2>
+</div></article></div><footer>FST-402 · NUS FSAE EV</footer></main>
+<a href="#top" class="back-top" aria-label="Back to top">↑</a></body></html>
