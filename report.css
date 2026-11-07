@@ -9,5 +9,13 @@
 .table-scroll table{width:100%;border-collapse:collapse;font-size:.94rem;line-height:1.4}
 .table-scroll td,.table-scroll th{border:1px solid #bbb;padding:8px;vertical-align:top;text-align:left}
 .table-scroll th{background:#f0f0f0}
+.report-body ol,.report-body ul{padding-left:2.5rem;margin:10px 0 16px}
+.report-body li{padding-left:.2rem;margin:4px 0;line-height:1.5}
+.report-body ul{list-style-type:disc}
+.report-body .equation,.report-body .equation-group{text-align:center;margin:20px auto;font-family:Cambria,'Cambria Math',serif;font-size:1.1rem}
+.report-body .equation-group>div{margin:12px 0}
+.fraction{display:inline-flex;vertical-align:middle;flex-direction:column;text-align:center;line-height:1.25;padding:0 3px}
+.fraction>span:first-child{border-bottom:1px solid currentColor;padding:0 4px 2px}
+.fraction>span:last-child{padding-top:2px}
 .source-page{display:flow-root}
 @media print{.report-figure,.table-scroll{break-inside:avoid}}
