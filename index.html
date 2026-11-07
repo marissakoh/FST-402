@@ -80,20 +80,21 @@
 <figure class="report-figure"><svg viewBox="73.5 136.04 468.0 180.75000000000003" role="img" aria-label="Illustration from original report, page 10" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-10.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
 <p>Figure ?: Functional Diagram of Dynamometer</p>
 <p>Based on data from the FSAE team’s previous vehicles, the team operates with a final drive gear ratio ranging from the minimum of 3:1 to maximum of 4:1, stepping down the speed from their EMRAX traction motor to the wheels. Although the FSAE team currently imposes operating limits on the EMRAX motor, the dynamometer will be designed based on the peak capability of the EMRAX motor rather than the team&#x27;s current operating limit. This provides a factor of safety to the design and ensures that the dynamometer is not restricted to the team&#x27;s present configuration. Therefore, the dynamometer must be capable of accommodating the range of torque and rotational speed at the wheel hub resulting from these different gear ratios.</p>
-<p>𝐸𝑚𝑟𝑎𝑥 𝑃𝑒𝑎𝑘 𝑅𝑃𝑀 = 6500𝑅𝑃𝑀 𝐸𝑚𝑟𝑎𝑥 𝑃𝑒𝑎𝑘 𝑇𝑜𝑟𝑞𝑢𝑒= 220𝑁𝑚</p>
-<p>𝑀𝑎𝑥 𝑅𝑃𝑀 𝑡𝑜 𝑡ℎ𝑒 ℎ𝑢𝑏 (3: 1) = 6500</p>
-<p>3 ≃ 2167𝑅𝑃𝑀</p>
-<p>𝑀𝑎𝑥 𝑇𝑜𝑟𝑞𝑢𝑒 𝑝𝑒𝑟 ℎ𝑢𝑏 (4: 1) = 220×4</p>
-<p>2 = 440𝑁𝑚</p>
+<div class="equation-group">
+<div><i>Emrax Peak RPM</i> = 6500 RPM</div>
+<div><i>Emrax Peak Torque</i> = 220 Nm</div>
+<div><i>Max RPM to the hub</i> (3:1) = <span class="fraction"><span>6500</span><span>3</span></span> ≈ 2167 RPM</div>
+<div><i>Max Torque per hub</i> (4:1) = <span class="fraction"><span>220 × 4</span><span>2</span></span> = 440 Nm</div>
+</div>
 <p>Hence, as seen in figure ?, the mechanical power that is first translated from the car wheel to the dynamometer will be a maximum torque of approximately 440 Nm for a 4:1 ratio and a maximum speed of approximately 2167 rpm for a 3:1 ratio. The dynamometer then applies a controlled resistance on the car, and the heat and energy generated during this process will be handled by another system. A structural support system will also be required to hold all the components within the dynamometer.</p>
 </div>
 <div class="source-page" data-original-page="11">
 <h3 id="2-2-design-criteria">2.2 Design Criteria</h3>
 <p>Based on the needs of the NUS FSAE team and constraints of the dynamometer system, we came with a list of criteria to evaluate the effectiveness of the concepts:</p>
-<p>1. Able to withstand hub torque of 440 Nm 2. Able to withstand hub speed of 2167 RPM 3. Able to withstand operating duration of 15 minutes per week 4. Compact and Portable</p>
-<p>- Smaller than 50cm (L) x 50cm (W) - Due to limited space available within FSAE workshop 5. Minimal setup complexity</p>
-<p>- Straightforward rigging and disassembly - Easy to set up for testing and break down for storage 6. Easy access for maintenance 7. Ensure modularity for future expansion</p>
-<p>- Perform more advanced testing without complete redesign of system</p>
+<ol start="1"><li>Able to withstand hub torque of 440 Nm</li><li>Able to withstand hub speed of 2167 RPM</li><li>Able to withstand operating duration of 15 minutes per week</li><li>Compact and Portable</li></ol>
+<ul><li>Smaller than 50cm (L) x 50cm (W)</li><li>Due to limited space available within FSAE workshop</li></ul><ol start="5"><li>Minimal setup complexity</li></ol>
+<ul><li>Straightforward rigging and disassembly</li><li>Easy to set up for testing and break down for storage</li></ul><ol start="6"><li>Easy access for maintenance</li><li>Ensure modularity for future expansion</li></ol>
+<ul><li>Perform more advanced testing without complete redesign of system</li></ul>
 <h2 id="3-concept-development">3. Concept development</h2>
 <h3 id="3-1-dynamometer-types">3.1 Dynamometer Types</h3>
 <p>There are mainly two types of dynamometers, namely the chassis dynamometers and hub dynamometers.</p>
@@ -326,7 +327,7 @@
 <h3 id="5-1-epoxy-bonding-test">5.1 Epoxy Bonding Test</h3>
 <p>To justify the proposed epoxy bonding concept and validate its suitability for the dynamometer frame, static lap-shear testing was conducted to evaluate two structural adhesives available in the workshop: 3M DP490 and EPICOTE 3175.</p>
 <p>Two tests will be conducted to evaluate the performance of the adhesive:</p>
-<p>1. Static Lap-Shear Test (ISO 4587): To determine the maximum load and apparent shear strength</p>
+<ol start="1"><li>Static Lap-Shear Test (ISO 4587): To determine the maximum load and apparent shear strength</li></ol>
 <p>of the adhesive joint under static tensile loading. 2. Fatigue Lap-Shear Test (ISO 9664): To evaluate the fatigue resistance of the adhesive joint under</p>
 <p>repeated cyclic shear loading and determine the relationship between applied stress amplitude and the number of cycles to failure (S-N Curve).</p>
 <p>The results of the test are:</p>
@@ -456,15 +457,15 @@
 <p>The centre distance of the chain drive was selected with the objective of achieving a compact dynamometer assembly while maintaining sufficient clearance between the two sprockets.</p>
 <figure class="report-figure"><svg viewBox="180.0 150.46 252.0 182.24999999999997" role="img" aria-label="Illustration from original report, page 56" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-56.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
 <p>A 520 chain, with a pitch of</p>
-<p>𝑃= 15. 875𝑚𝑚</p>
+<div class="equation">𝑃= 15. 875𝑚𝑚</div>
 <p>was selected. The driver and driven sprockets have 28 and 11 teeth, respectively:</p>
-<p>𝑍1 = 28, 𝑍2 = 11</p>
+<div class="equation">𝑍1 = 28, 𝑍2 = 11</div>
 <p>The outer radii of the two sprockets are measured to be:</p>
-<p>𝑅1 = 75. 2𝑚𝑚, 𝑅2 = 37. 5𝑚𝑚</p>
+<div class="equation">𝑅1 = 75. 2𝑚𝑚, 𝑅2 = 37. 5𝑚𝑚</div>
 <p>Therefore, the theoretical minimum centre distance required to prevent physical interference between the sprockets is:</p>
-<p>𝐶min = 𝑅1 + 𝑅2</p>
+<div class="equation">𝐶min = 𝑅1 + 𝑅2</div>
 <p>Therefore,</p>
-<p>𝐶min = 112. 7𝑚𝑚</p>
+<div class="equation">𝐶min = 112. 7𝑚𝑚</div>
 <p>Since a compact drivetrain was desired, this minimum value was initially used as the contemplated centre distance.</p>
 <p>Using the Renold chain-length equation,</p>
 </div>
@@ -472,19 +473,19 @@
 <figure class="report-figure"><svg viewBox="168.75 73.5 274.5 69.0" role="img" aria-label="Illustration from original report, page 57" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-57.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
 <p>Substituting the values in gives,</p>
 <p>2 15.875</p>
-<p>𝐿= 2(112.7)</p>
+<div class="equation">𝐿= 2(112.7)</div>
 <p>15.875 + 28+11</p>
 <p>2 + 11−28</p>
 <p>2π ( )</p>
-<p>112.7 = 34.73 pitches</p>
+<div class="equation">112.7 = 34.73 pitches</div>
 <p>This gives us the minimum number of chain links that we will use. Additionally, a roller chain must contain a whole number of pitches, and Renold recommends the use of an even number of pitches to avoid the use of a cranked link. Furthermore, for optimum wear life, Renold states that it is recommended that centre distance between two sprockets should be within 30-50 times the chain pitch. Due to structural constraints of the components, we have identified the number of chain links to be L = 42 pitches. Using Renold&#x27;s centre-distance equation,</p>
 <figure class="report-figure"><svg viewBox="111.0 358.98 390.0 129.33999999999997" role="img" aria-label="Illustration from original report, page 57" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-57.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
 <figure class="report-figure"><svg viewBox="205.5 463.56 201.0 59.24999999999994" role="img" aria-label="Illustration from original report, page 57" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-57.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
 <p>Gives,</p>
 <p>2 − π 3.88 (11 −28)</p>
-<p>𝐶= 15.875</p>
+<div class="equation">𝐶= 15.875</div>
 <p>2 ⎡⎢⎣</p>
-<p>⎤⎥⎦ = 173.27mm</p>
+<div class="equation">⎤⎥⎦ = 173.27mm</div>
 <p>8 2(42) −11 −28 + [2(42) −11 −28]</p>
 <p>Thus, a 42-pitch chain and centre distance of 173.27 mm were adopted for the final design, providing adequate sprocket clearance while maintaining a relatively compact drivetrain layout.</p>
 </div>
@@ -531,18 +532,18 @@
 <div class="source-page" data-original-page="62">
 <h2 id="appendix-h-bearing-life-analysis">Appendix H —Bearing Life Analysis</h2>
 <p>The Formula SAE (FSAE) race car has an estimated total mass of 200 kg. Assuming that the vehicle weight is equally distributed across all four wheels, the equivalent mass supported by each wheel can be calculated as:</p>
-<p>𝑊𝑒𝑖𝑔ℎ𝑡 𝑑𝑖𝑠𝑡𝑟𝑖𝑏𝑢𝑡𝑖𝑜𝑛 𝑜𝑛 𝑎 𝑤ℎ𝑒𝑒𝑙= 200/4 = 50 𝑘𝑔 ≈ 500𝑁</p>
+<div class="equation">𝑊𝑒𝑖𝑔ℎ𝑡 𝑑𝑖𝑠𝑡𝑟𝑖𝑏𝑢𝑡𝑖𝑜𝑛 𝑜𝑛 𝑎 𝑤ℎ𝑒𝑒𝑙= 200/4 = 50 𝑘𝑔 ≈ 500𝑁</div>
 <p>For the purpose of this analysis, an equivalent radial load of 500 N is assumed, with axial loading considered negligible. This provides a simplified basis for comparing the theoretical fatigue life of the EMRAX 228 motor bearings against the selected dynamometer bearings.</p>
 <p>As the dynamometer operates at relatively high rotational speeds, bearings suitable for high-speed applications were prioritised. However, the selected thin-section bearings have lower basic dynamic load ratings compared to the EMRAX motor bearings. To compensate for this, two bearings are used at each bearing location to distribute the applied load. Assuming equal load distribution between the two bearings, the radial load experienced by each bearing is:</p>
-<p>𝐸𝑎𝑐ℎ 𝑏𝑒𝑎𝑟𝑖𝑛𝑔 𝑙𝑜𝑎𝑑 = 500/2 = 250𝑁</p>
+<div class="equation">𝐸𝑎𝑐ℎ 𝑏𝑒𝑎𝑟𝑖𝑛𝑔 𝑙𝑜𝑎𝑑 = 500/2 = 250𝑁</div>
 <p>Two bearing locations are considered in the analysis:</p>
 <p>Assuming the worst case condition of the FSAE car driving at full load, the car’s Emrax peak at 6500RPM.</p>
 <p>1) Bearing A (NSK 6910VVCM): Located at the hub-side shaft where RPM is determined by the</p>
 <p>selection of the FSAE car dive ratio. The maximum RPM is when a gear ratio of 3:1 is selected.</p>
-<p>𝑅𝑃𝑀 𝑎𝑡 𝑏𝑒𝑎𝑟𝑖𝑛𝑔 𝐴 = 6500/3 = 2167𝑅𝑃𝑀</p>
+<div class="equation">𝑅𝑃𝑀 𝑎𝑡 𝑏𝑒𝑎𝑟𝑖𝑛𝑔 𝐴 = 6500/3 = 2167𝑅𝑃𝑀</div>
 <p>2) Bearing B (NSK 6907V): Located on the dynamometer shaft after the chain-and-sprocket drive</p>
 <p>transmission of 2.5:1.</p>
-<p>𝑅𝑃𝑀 𝑎𝑡 𝑏𝑒𝑎𝑟𝑖𝑛𝑔 𝐵 = 2167 𝑋 2. 5 = 5417𝑅𝑃𝑀</p>
+<div class="equation">𝑅𝑃𝑀 𝑎𝑡 𝑏𝑒𝑎𝑟𝑖𝑛𝑔 𝐵 = 2167 𝑋 2. 5 = 5417𝑅𝑃𝑀</div>
 <p>The theoretical fatigue life of each bearing is subsequently calculated and compared against the EMRAX 228 motor bearing benchmark to evaluate its suitability for the dynamometer. The table XX shows the parameters for our calculation.</p>
 <div class="table-scroll"><table><tr><th>Bearings:</th><th>Dyno’s Emrax 228</th><th>Bearing A NSK 6910VVCM</th><th>Bearing B NSK 6907V</th></tr><tr><td>RPM</td><td>5417</td><td>2167</td><td>5417</td></tr><tr><td>Radial Force</td><td>500N</td><td>250N</td><td>250N</td></tr></table></div>
 </div>
@@ -550,26 +551,26 @@
 <p>In the Emrax there are 2 bearings, FAG3206 and FAG6206. We will calculate the Life expectancy using ISO 281 bearing life equation and take the lowest one for the benchmark.</p>
 <p>EMRAX FAG 6206 :</p>
 <p>6</p>
-<p>3 = 221500 𝐻𝑜𝑢𝑟𝑠</p>
-<p>𝐶𝑟 = 20. 8𝑘𝑁 𝐿₁₀ = 10</p>
+<div class="equation">3 = 221500 𝐻𝑜𝑢𝑟𝑠</div>
+<div class="equation">𝐶𝑟 = 20. 8𝑘𝑁 𝐿₁₀ = 10</div>
 <p>60(5417) ( 20800</p>
 <p>500 )</p>
 <p>EMRAX FAG 3206:</p>
 <p>6</p>
-<p>3 = 733200 𝐻𝑜𝑢𝑟𝑠</p>
-<p>𝐶𝑟 = 31𝑘𝑁 𝐿₁₀ = 10</p>
+<div class="equation">3 = 733200 𝐻𝑜𝑢𝑟𝑠</div>
+<div class="equation">𝐶𝑟 = 31𝑘𝑁 𝐿₁₀ = 10</div>
 <p>60(5417) ( 31000</p>
 <p>500 )</p>
 <p>Bearing A NSK 6910VVCM:</p>
 <p>6</p>
-<p>3 = 2016200 𝐻𝑜𝑢𝑟𝑠</p>
-<p>𝐶𝑟 = 16𝑘𝑁 𝐿₁₀ = 10</p>
+<div class="equation">3 = 2016200 𝐻𝑜𝑢𝑟𝑠</div>
+<div class="equation">𝐶𝑟 = 16𝑘𝑁 𝐿₁₀ = 10</div>
 <p>60(2167) ( 16000</p>
 <p>250 )</p>
 <p>Bearing B NSK 6907V:</p>
 <p>6</p>
-<p>3 = 307300 𝐻𝑜𝑢𝑟𝑠</p>
-<p>𝐶𝑟 = 11. 6𝑘𝑁 𝐿₁₀ = 10</p>
+<div class="equation">3 = 307300 𝐻𝑜𝑢𝑟𝑠</div>
+<div class="equation">𝐶𝑟 = 11. 6𝑘𝑁 𝐿₁₀ = 10</div>
 <p>60(5417) ( 11600</p>
 <p>250 )</p>
 <div class="table-scroll"><table><tr><th>Comparison Table</th><th>Life Expectancy (Hours)</th></tr><tr><td>EMRAX FAG 6206</td><td>221,500 h</td></tr><tr><td>NSK 6910VVCM</td><td>2,016,200 h</td></tr><tr><td>NSK 6907V</td><td>307,300 h</td></tr></table></div>
@@ -585,7 +586,7 @@
 <p>Surface Preparation</p>
 <p>The bonding surfaces will be prepared consistently to minimise variations in adhesive performance caused by surface contamination or irregularities.</p>
 <p>The following procedure was adopted:</p>
-<p>1. wq</p>
+<ol start="1"><li>wq</li></ol>
 <p>Adhesive preparation and curing</p>
 <p>Epicote 3175 consists of two components, Part A and Part B, which were mixed at a ratio of 1:1 prior to application. A 0.2 mm shim was used to control the adhesive bond-line thickness and ensure consistency across the specimens.</p>
 </div>
@@ -599,25 +600,19 @@
 </div>
 <div class="source-page" data-original-page="66">
 <p>Static</p>
-<p>1. Mount the specimen symmetrically in the tensile testing machine. 2. Position each grip approximately 50 ± 1 mm from the nearest edge of the bonded overlap, as</p>
-<p>specified in ISO 4587. 3. Ensure the specimen is properly aligned with the loading direction. Suitable shims may be used</p>
-<p>to minimise unintended bending. 4. Apply tensile loading at a constant test speed selected such that the average specimen fails</p>
-<p>within 65 ± 20 seconds. 5. Continue loading until failure occurs. 6. Record the maximum force sustained by the specimen, (F_{\max}). 7. Inspect and photograph the failed specimen. Record whether failure occurred within the</p>
-<p>adhesive, at the adhesive-metal interface, or within the metallic adherend. 8. Repeat the procedure for all 3 specimens.</p>
+<ol start="1"><li>Mount the specimen symmetrically in the tensile testing machine.</li><li>Position each grip approximately 50 ± 1 mm from the nearest edge of the bonded overlap, as specified in ISO 4587.</li><li>Ensure the specimen is properly aligned with the loading direction. Suitable shims may be used to minimise unintended bending.</li><li>Apply tensile loading at a constant test speed selected such that the average specimen fails within 65 ± 20 seconds.</li><li>Continue loading until failure occurs.</li><li>Record the maximum force sustained by the specimen, (F_{\max}).</li><li>Inspect and photograph the failed specimen. Record whether failure occurred within the adhesive, at the adhesive-metal interface, or within the metallic adherend.</li><li>Repeat the procedure for all 3 specimens.</li></ol>
 <p>From the data, we determined the shear stress from the 3 samples:</p>
 <p>Shear stress = Fmax / Area</p>
 <p>The average static lap-shear strength is: ⅓ (τ1 + τ2 + τ3)</p>
 <p>Fatigue</p>
 <p>The fatigue lap-shear test will evaluate the resistance of the adhesive joint to repeated tensile-shear loading.</p>
 <p>The mean stress was determined by following the ISO standard recommendation of 0.35x τstatic.</p>
-<p>τmean = 0.35(τstatic)</p>
+<div class="equation">τmean = 0.35(τstatic)</div>
 <p>Selection of 3 different stress amplitude to maintain tensile-tensile cyclic conditions. According to ISO 9664, preliminary fatigue tests may be required to identify suitable stress amplitudes that produce failure between (10^4) and (10^6) cycles.</p>
-<p>1. Mount a new specimen in the fatigue testing machine using suitable aligned grips. 2. Configure the machine for sinusoidal load-controlled fatigue testing. 3. Set the mean force, (F_m), based on the selected mean stress. 4. Set the force amplitude, (F_a), corresponding to the selected stress amplitude. 5. Set the testing frequency to 30 Hz, subject to machine capability and confirmation that excessive</p>
-<p>specimen heating does not occur.</p>
+<ol start="1"><li>Mount a new specimen in the fatigue testing machine using suitable aligned grips.</li><li>Configure the machine for sinusoidal load-controlled fatigue testing.</li><li>Set the mean force, (F_m), based on the selected mean stress.</li><li>Set the force amplitude, (F_a), corresponding to the selected stress amplitude.</li><li>Set the testing frequency to 30 Hz, subject to machine capability and confirmation that excessive specimen heating does not occur.</li></ol>
 </div>
 <div class="source-page" data-original-page="67">
-<p>6. Apply the mean load and gradually establish the required cyclic loading conditions. 7. Continue cyclic loading until the specimen fails or reaches the predetermined run-out limit of</p>
-<p>(10^6) cycles. 8. Record the number of cycles to failure, (N), together with the failure mode. 9. For specimens surviving (10^6) cycles, record the result as a run-out rather than a failure. 10.Repeat the test three specimens at each selected stress amplitude. 11.Repeat the procedure for the remaining stress amplitudes.</p>
+<ol start="6"><li>Apply the mean load and gradually establish the required cyclic loading conditions.</li><li>Continue cyclic loading until the specimen fails or reaches the predetermined run-out limit of (10^6) cycles.</li><li>Record the number of cycles to failure, (N), together with the failure mode.</li><li>For specimens surviving (10^6) cycles, record the result as a run-out rather than a failure.</li><li>Repeat the test three specimens at each selected stress amplitude.</li><li>Repeat the procedure for the remaining stress amplitudes.</li></ol>
 <p>From the data, the relationship between cyclic stress amplitude and number of cycles to failure will be determined through the construction of a stress-life (S-N) curve.</p>
 </div>
 <div class="source-page" data-original-page="68">
@@ -625,13 +620,13 @@
 <p>Aluminium 6061-T6:</p>
 <figure class="report-figure"><svg viewBox="242.62 141.02 126.75999999999999 140.99999999999997" role="img" aria-label="Illustration from original report, page 68" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-68.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
 <p>Given:</p>
-<p class="bullet">● Cross-sectional area, A = 235.78 mm² ● Tensile yield strength, σᵧ = 276 MPa</p>
+<ul><li>Cross-sectional area, A = 235.78 mm²</li><li>Tensile yield strength, σᵧ = 276 MPa</li></ul>
 <p>The maximum force corresponding to tensile yielding is:</p>
-<p>= (276MPa × 235.78mm²) = 65,075.28 N 𝐹𝐴𝑙= σ𝑦𝐴𝐴𝑙</p>
+<div class="equation">= (276MPa × 235.78mm²) = 65,075.28 N 𝐹𝐴𝑙= σ𝑦𝐴𝐴𝑙</div>
 <p>3M DP490:</p>
 <p>Taking a specific joint as an example,</p>
 <p>Given:</p>
-<p class="bullet">● Experimental shear strength, τ = 14.841 MPa = 14.841 N/mm² ● Bonded area 1 = 2,035 mm² ● Bonded area 2 = 2,540 mm² ● Bonded area 3 = 1,587.5 mm² (2 surfaces)</p>
+<ul><li>Experimental shear strength, τ = 14.841 MPa = 14.841 N/mm²</li><li>Bonded area 1 = 2,035 mm²</li><li>Bonded area 2 = 2,540 mm²</li><li>Bonded area 3 = 1,587.5 mm² (2 surfaces)</li></ul>
 </div>
 <div class="source-page" data-original-page="69">
 <figure class="report-figure"><svg viewBox="109.5 73.5 216.75 128.25" role="img" aria-label="Illustration from original report, page 69" xmlns="http://www.w3.org/2000/svg"><image href="assets/report-pages/page-69.jpg" x="0" y="0" width="612" height="792"/></svg></figure>
