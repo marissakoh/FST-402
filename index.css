@@ -80,3 +80,6 @@ body{margin:0;background:white}
 .report-body h2{font-size:1.55rem;margin:28px 0 16px}
 .report-body h3{font-size:1.25rem;margin:24px 0 12px}
 .report-body h4{font-size:1.1rem;margin:20px 0 9px}
+
+/* Centre standalone mathematical expressions from the Word report. */
+.report-body p:has(> math):not(:has(> :not(math))){text-align:center;margin:18px auto}
