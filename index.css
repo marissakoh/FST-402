@@ -64,3 +64,19 @@ body{margin:0;background:white}
 .source-page{display:flow-root}
 @media(max-width:760px){.sidebar{transform:translateX(-100%);transition:transform .2s}.sidebar.open{transform:translateX(0)}.menu-toggle{display:block;position:sticky;top:0;z-index:30;border:0;background:#141414;color:white;padding:12px 18px;width:100%;text-align:left}.page-shell{margin-left:0}.page-shell .content{padding:28px 20px}.title-page{padding-top:50px}}
 @media print{.report-figure,.table-scroll{break-inside:avoid}}
+
+/* Final Word report conversion */
+.report-body img{max-width:100%;height:auto;object-fit:contain}
+.report-body figure.report-figure{margin:20px auto 12px;text-align:center}
+.report-body figure.report-figure img{display:block;margin:auto;max-height:720px}
+.report-body table{border-collapse:collapse;width:100%;max-width:100%;margin:16px 0 24px;font-size:.95rem}
+.report-body th,.report-body td{border:1px solid #bbb;padding:7px 9px;vertical-align:top;overflow-wrap:anywhere}
+.report-body th{background:#f7f7f7}
+.report-body table p{font-size:inherit;text-align:left;margin:3px 0}
+.report-body table ul,.report-body table ol{padding-left:1.4rem;margin:2px 0}
+.report-body math[display="block"]{display:block;text-align:center;margin:18px auto;max-width:100%;overflow-x:auto}
+.report-body .caption{text-align:center;font-size:.95rem;margin:8px auto 16px}
+.report-body blockquote{margin:12px 0;padding-left:22px;border-left:3px solid #ddd}
+.report-body h2{font-size:1.55rem;margin:28px 0 16px}
+.report-body h3{font-size:1.25rem;margin:24px 0 12px}
+.report-body h4{font-size:1.1rem;margin:20px 0 9px}
