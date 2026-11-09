@@ -127,8 +127,8 @@ body{margin:0;background:white}
 /* Tables 11 and 12 share the same visible dimensions, inside the page. */
 .report-body .report-table-image:has(img[src*="table-11.webp"]),
 .report-body .report-table-image:has(img[src*="table-12.webp"]){
-  width:80%;
-  max-width:80%;
+  width:60%;
+  max-width:60%;
   overflow:hidden;
 }
 /* Table 11 has white side margins within its image. Remove those visually
