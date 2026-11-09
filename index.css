@@ -122,6 +122,16 @@ body{margin:0;background:white}
 .report-table-image{margin:16px auto 24px;text-align:center;max-width:100%}
 .report-table-image img{display:block;width:100%;height:auto;max-width:100%}
 .report-body .report-table-image:has(img[src*="table-03.webp"]){width:90%}
+.report-body .table-3-wrap{width:90%;max-width:100%;margin:12px auto 24px}
+.report-body .table-3-matrix{width:100%;table-layout:fixed;margin:0;font-size:clamp(10px,1.3vw,16px)}
+.report-body .table-3-matrix th,.report-body .table-3-matrix td{border:1px solid #111;text-align:center;vertical-align:middle;padding:10px 5px;overflow-wrap:normal;word-break:normal}
+.report-body .table-3-matrix th{background:#ccc;font-weight:normal}
+.report-body .table-3-matrix th:nth-child(1){width:22%}
+.report-body .table-3-matrix th:nth-child(2){width:11%}
+.report-body .table-3-matrix th:nth-child(3){width:22%}
+.report-body .table-3-matrix th:nth-child(4){width:23%}
+.report-body .table-3-matrix th:nth-child(5){width:22%}
+.report-body .table-3-note{font-style:italic;font-size:clamp(9px,1vw,12px);margin:3px 0 0;text-align:left}
 .report-body .design-criteria-list{margin-top:6px;margin-bottom:12px}
 .report-body .design-criteria-list li{margin:2px 0;line-height:1.25}
 .report-body .design-criteria-list li > p{margin:2px 0;line-height:1.25}
