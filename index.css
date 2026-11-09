@@ -76,43 +76,31 @@ body{margin:0;background:white}
 .report-body p:has(> img:nth-of-type(2)) > img{
   width:auto!important;
   height:220px!important;
-  max-width:50%;
-  object-fit:contain;
+  max-width:none!important;
   vertical-align:middle;
 }
-.report-body p:has(> img:nth-of-type(3)) > img{height:180px!important;max-width:33.333%}
-.report-body p:has(> img:nth-of-type(4)) > img{height:140px!important;max-width:25%}
+.report-body p:has(> img:nth-of-type(3)) > img{height:180px!important}
+.report-body p:has(> img:nth-of-type(4)) > img{height:140px!important}
 @media(max-width:700px){
   .report-body p:has(> img:nth-of-type(2)) > img{height:130px!important}
   .report-body p:has(> img:nth-of-type(3)) > img{height:110px!important}
   .report-body p:has(> img:nth-of-type(4)) > img{height:90px!important}
 }
-/* Larger detail-design illustrations, retaining their adjacent arrangement. */
-.report-body [data-page="detail-design"] figure.report-figure img,
-.report-body [data-page="detail-design"] p:has(> img:only-child) > img{
-  width:80%!important;
-  max-width:80%!important;
-  height:auto!important;
-}
+/* Detail-design photo groups: same natural height, adjacent edges, no crop. */
 .report-body [data-page="detail-design"] p:has(> img:nth-of-type(2)){
   display:flex;
-  width:80%;
   justify-content:center;
   align-items:center;
   gap:0;
 }
 .report-body [data-page="detail-design"] p:has(> img:nth-of-type(2)) > img{
-  flex:1 1 0;
-  width:0!important;
+  flex:none;
+  width:auto!important;
   max-width:none!important;
-  height:300px!important;
-  object-fit:contain;
+  height:var(--photo-height,220px)!important;
 }
-.report-body [data-page="detail-design"] p:has(> img:nth-of-type(3)) > img{height:245px!important}
 @media(max-width:700px){
-  .report-body [data-page="detail-design"] p:has(> img:nth-of-type(2)){width:100%}
-  .report-body [data-page="detail-design"] p:has(> img:nth-of-type(2)) > img{height:170px!important}
-  .report-body [data-page="detail-design"] p:has(> img:nth-of-type(3)) > img{height:130px!important}
+  .report-body [data-page="detail-design"] p:has(> img:nth-of-type(2)) > img{height:var(--photo-height,130px)!important}
 }
 .report-body figure.report-figure{margin:20px auto 12px;text-align:center}
 .report-body figure.report-figure img{display:block;margin:auto;max-height:720px}

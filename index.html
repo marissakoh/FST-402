@@ -5,7 +5,7 @@
 <link href="./favicon.ico" rel="icon" type="image/x-icon"/>
 <link href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js" type="module"></script>
-<link href="./index.css?v=11" rel="stylesheet"/>
+<link href="./index.css?v=12" rel="stylesheet"/>
 <link href="./components/team-member/team-member.css" rel="stylesheet"/>
 <script src="./components/team-member/team-member.js" type="module"></script>
 <link href="./components/scroll-to-top/scroll-to-top.css" rel="stylesheet"/>
@@ -353,7 +353,7 @@ and the sprocket centre distance, which affects chain length and
 tensioning.</p><figure class="report-figure"><img alt="Report figure" loading="lazy" src="final-images/image24.webp" style="width:3.45833in;max-width:100%;height:auto"/></figure><p class="caption">Figure 27 : Chain-drive mechanism</p><h4 id="gear-ratio">4.4.1 Gear Ratio</h4><p>As the FSAE race car has a gear drive that ranges between 3 to 4
 based on the year’s design, the dynamometer’s gear ratio has to be able
 to account for the maximum operating conditions of 440 Nm torque or 2167
-RPM speed from the car.</p><p class="caption">Table 10: Comparison of different chain-drive ratios</p><figure class="report-table-image"><img src="table-images/table-10.webp" alt="Table 10 from the final report" loading="lazy"></figure><p>As seen in table 10, we compared the percentage utilisation of the
+RPM speed from the car.</p><p class="caption">Table 10: Comparison of different chain-drive ratios</p><figure class="report-table-image"><img src="table-images/table-10.webp?v=2" alt="Table 10 from the final report" loading="lazy"></figure><p>As seen in table 10, we compared the percentage utilisation of the
 maximum allowable input torque and speed for the EMRAX motor, and
 concluded that a gear ratio of 2.5:1 balances both torque and speed
 similarly.</p><figure class="report-figure"><img alt="Report figure" loading="lazy" src="final-images/image50.webp" style="width:2.22879in;max-width:100%;height:auto"/></figure><p class="caption">Figure 28: 11 Teeth Custom Sprocket</p><p>The FSAE team has a custom 4340 steel 11 teeth sprocket with an
@@ -883,11 +883,25 @@ then repeated for the other joints around the truss as well.</p><figure class="r
   const sidebar = document.querySelector('.sidebar');
   const previous = document.getElementById('previous-page');
   const next = document.getElementById('next-page');
+  const detailPhotoGroups = [...document.querySelectorAll('[data-page="detail-design"] p:has(> img:nth-of-type(2))')];
+  function fitDetailPhotoGroups() {
+    detailPhotoGroups.forEach(group => {
+      if (!group.clientWidth) return;
+      const photos = [...group.querySelectorAll(':scope > img')];
+      if (photos.some(img => !img.naturalWidth || !img.naturalHeight)) return;
+      const aspectSum = photos.reduce((sum,img) => sum + img.naturalWidth / img.naturalHeight, 0);
+      const height = Math.min(360, group.clientWidth * .8 / aspectSum);
+      group.style.setProperty('--photo-height', `${height}px`);
+    });
+  }
+  detailPhotoGroups.forEach(group => group.querySelectorAll('img').forEach(img => img.addEventListener('load',fitDetailPhotoGroups)));
+  window.addEventListener('resize', fitDetailPhotoGroups);
   function showPage() {
     const id = decodeURIComponent(location.hash.slice(1)) || 'title';
     const target = document.getElementById(id);
     const active = target?.closest('.report-page') || document.querySelector('[data-page="' + id + '"]') || allPages[0];
     allPages.forEach(p => p.hidden = p !== active);
+    if (active.dataset.page === 'detail-design') fitDetailPhotoGroups();
     const index = pages.indexOf(active.dataset.page);
     previous.disabled = index <= 0;
     next.disabled = index >= pages.length - 1;
