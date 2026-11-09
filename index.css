@@ -81,5 +81,7 @@ body{margin:0;background:white}
 .report-body h3{font-size:1.25rem;margin:24px 0 12px}
 .report-body h4{font-size:1.1rem;margin:20px 0 9px}
 
-/* Centre standalone mathematical expressions from the Word report. */
+/* Tables are snapshots of the final Google Doc for exact layout fidelity. */
+.report-table-image{margin:16px auto 24px;text-align:center;max-width:100%}
+.report-table-image img{display:block;width:100%;height:auto;max-width:100%}
 .report-body p:has(> math):not(:has(> :not(math))){text-align:center;margin:18px auto}
