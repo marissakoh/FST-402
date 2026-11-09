@@ -68,25 +68,21 @@ body{margin:0;background:white}
 /* Final Word report conversion */
 .report-body img{max-width:100%;height:auto;object-fit:contain}
 .report-body :is(p,h1,th,td):has(> img){text-align:center}
-/* All multi-photo figures use equal display boxes without cropping diagrams. */
+/* Preserve the original inline, edge-to-edge layout; match photo heights. */
 .report-body p:has(> img:nth-of-type(2)){
-  display:grid;
-  grid-auto-flow:column;
-  grid-auto-columns:minmax(0,1fr);
-  align-items:center;
-  gap:12px;
+  text-align:center;
   margin:18px auto;
 }
 .report-body p:has(> img:nth-of-type(2)) > img{
-  width:100%!important;
-  height:240px!important;
+  width:auto!important;
+  height:220px!important;
+  max-width:50%;
   object-fit:contain;
-  justify-self:center;
+  vertical-align:middle;
 }
-.report-body p:has(> img:nth-of-type(3)) > img{height:190px!important}
-.report-body p:has(> img:nth-of-type(4)) > img{height:160px!important}
+.report-body p:has(> img:nth-of-type(3)) > img{height:180px!important;max-width:33.333%}
+.report-body p:has(> img:nth-of-type(4)) > img{height:140px!important;max-width:25%}
 @media(max-width:700px){
-  .report-body p:has(> img:nth-of-type(2)){gap:6px}
   .report-body p:has(> img:nth-of-type(2)) > img{height:130px!important}
   .report-body p:has(> img:nth-of-type(3)) > img{height:110px!important}
   .report-body p:has(> img:nth-of-type(4)) > img{height:90px!important}
