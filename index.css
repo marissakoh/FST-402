@@ -132,6 +132,7 @@ body{margin:0;background:white}
 .report-body .table-3-matrix th:nth-child(4){width:23%}
 .report-body .table-3-matrix th:nth-child(5){width:22%}
 .report-body .table-3-note{font-style:italic;font-size:clamp(9px,1vw,12px);margin:3px 0 0;text-align:left}
+.report-body .table-3-screenshot{width:90%;max-width:100%}
 /* Give the stacked hub RPM/torque fractions their own vertical space. */
 .report-body [data-page="design-requirements"] p:has(> math:nth-of-type(2) mfrac){
   display:flex;
@@ -143,6 +144,7 @@ body{margin:0;background:white}
   line-height:1.8;
 }
 .report-body [data-page="design-requirements"] p:has(> math:nth-of-type(2) mfrac) > math{display:block;line-height:1.8}
+.report-body [data-page="design-requirements"] p:has(> math:nth-of-type(2) mfrac){align-items:center;text-align:center}
 .report-body .design-criteria-list{margin-top:6px;margin-bottom:12px}
 .report-body .design-criteria-list li{margin:2px 0;line-height:1.25}
 .report-body .design-criteria-list li > p{margin:2px 0;line-height:1.25}
