@@ -119,4 +119,23 @@ body{margin:0;background:white}
 /* Tables are snapshots of the final Google Doc for exact layout fidelity. */
 .report-table-image{margin:16px auto 24px;text-align:center;max-width:100%}
 .report-table-image img{display:block;width:100%;height:auto;max-width:100%}
+.report-body img[src$="image91.webp"]{width:6.2in!important;max-width:90%!important}
+.report-body img[src$="image68.webp"]{width:2.6in!important}
+.report-body img[src$="image24.webp"]{width:3.9in!important}
+.report-body img[src$="image50.webp"]{width:2.6in!important}
+/* Figure 40's bottom image is nested in a table paragraph. */
+.report-body table th p:has(> img){text-align:center}
+/* Give Table 16 breathing room so its rightmost border stays visible. */
+.report-body .report-table-image:has(img[src*="table-23.webp"]){padding:0 12px;box-sizing:border-box}
+.report-body .report-table-image img[src*="table-23.webp"]{border-right:2px solid #222;box-sizing:border-box}
+/* The cooling specification was exported sideways; rotate it in place. */
+.report-body figure.report-figure:has(> img[src$="image42.webp"]){height:clamp(125px,26vw,340px);position:relative}
+.report-body figure.report-figure > img[src$="image42.webp"]{
+  position:absolute;
+  top:50%;left:50%;
+  width:min(300px,30vw)!important;
+  max-width:none!important;
+  height:auto!important;
+  transform:translate(-50%,-50%) rotate(-90deg);
+}
 .report-body p:has(> math):not(:has(> :not(math))){text-align:center;margin:18px auto}
