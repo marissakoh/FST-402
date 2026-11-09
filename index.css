@@ -33,6 +33,8 @@ body{margin:0;background:white}
 .report-page[hidden]{display:none!important}
 .title-page{text-align:center;padding-top:95px;min-height:600px}
 .title-page h1{font-size:2.15rem;line-height:1.3}
+.title-page .cover-title-block{display:flex;flex-direction:column;align-items:center;gap:26px;max-width:100%}
+.title-page .cover-title-block > *{font-size:clamp(1.35rem,3vw,2.25rem);font-weight:700;line-height:1.25;text-align:center;margin:0}
 .title-page .team-member-wrapper{margin-top:55px}
 .report-body .report-page{min-height:65vh}
 .report-body .report-page>h2{margin-top:12px}
