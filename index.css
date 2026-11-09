@@ -131,10 +131,6 @@ body{margin:0;background:white}
   max-width:80%;
   overflow:hidden;
 }
-.report-body .report-table-image:has(img[src*="table-11.webp"]){
-  border-right:2px solid #111;
-  box-sizing:border-box;
-}
 /* Table 11 has white side margins within its image. Remove those visually
    so the actual table matches Table 12 inside the shared frame. */
 .report-body .report-table-image img[src*="table-11.webp"]{
