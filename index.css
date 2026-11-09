@@ -67,7 +67,7 @@ body{margin:0;background:white}
 
 /* Final Word report conversion */
 .report-body img{max-width:100%;height:auto;object-fit:contain}
-.report-body p:has(> img){text-align:center}
+.report-body :is(p,h1,th,td):has(> img){text-align:center}
 .report-body figure.report-figure{margin:20px auto 12px;text-align:center}
 .report-body figure.report-figure img{display:block;margin:auto;max-height:720px}
 .report-body table{border-collapse:collapse;width:100%;max-width:100%;margin:16px 0 24px;font-size:.95rem}
