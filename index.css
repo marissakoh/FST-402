@@ -120,7 +120,10 @@ body{margin:0;background:white}
 .report-table-image{margin:16px auto 24px;text-align:center;max-width:100%}
 .report-table-image img{display:block;width:100%;height:auto;max-width:100%}
 .report-body .report-table-image:has(img[src*="table-03.webp"]){width:90%}
-.report-body .design-criteria-list > li > ul{margin:4px 0 12px;padding-left:1.8rem}
+.report-body .design-criteria-list{margin-top:6px;margin-bottom:12px}
+.report-body .design-criteria-list li{margin:2px 0;line-height:1.25}
+.report-body .design-criteria-list li > p{margin:2px 0;line-height:1.25}
+.report-body .design-criteria-list > li > ul{margin:2px 0 6px;padding-left:1.8rem}
 /* Tables 11 and 12 share the same visible dimensions, inside the page. */
 .report-body .report-table-image:has(img[src*="table-11.webp"]),
 .report-body .report-table-image:has(img[src*="table-12.webp"]){
