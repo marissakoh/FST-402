@@ -119,7 +119,15 @@ body{margin:0;background:white}
 /* Tables are snapshots of the final Google Doc for exact layout fidelity. */
 .report-table-image{margin:16px auto 24px;text-align:center;max-width:100%}
 .report-table-image img{display:block;width:100%;height:auto;max-width:100%}
-.report-body img[src$="image91.webp"]{width:6.2in!important;max-width:90%!important}
+/* Table 11's source image includes wide white side margins; visually trim them
+   so its table and text match Table 12's display scale. */
+.report-body .report-table-image:has(img[src*="table-11.webp"]){overflow:hidden}
+.report-body .report-table-image img[src*="table-11.webp"]{
+  width:123%!important;
+  max-width:none!important;
+  margin-left:-11.3%;
+}
+.report-body img[src*="image91.webp"]{width:6.2in!important;max-width:90%!important}
 .report-body img[src$="image68.webp"]{width:2.6in!important}
 .report-body img[src$="image24.webp"]{width:3.9in!important}
 .report-body img[src$="image50.webp"]{width:2.6in!important}
