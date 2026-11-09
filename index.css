@@ -119,6 +119,8 @@ body{margin:0;background:white}
 /* Tables are snapshots of the final Google Doc for exact layout fidelity. */
 .report-table-image{margin:16px auto 24px;text-align:center;max-width:100%}
 .report-table-image img{display:block;width:100%;height:auto;max-width:100%}
+.report-body .report-table-image:has(img[src*="table-03.webp"]){width:90%}
+.report-body .design-criteria-list > li > ul{margin:4px 0 12px;padding-left:1.8rem}
 /* Table 11's source image includes wide white side margins; visually trim them
    so its table and text match Table 12's display scale. */
 .report-body .report-table-image:has(img[src*="table-11.webp"]){overflow:hidden}
